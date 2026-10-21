@@ -29,3 +29,7 @@ wg1027    2d7e817d9ade474a42695f9f1f65df0013ac7f420a3721752835b0c2dcf0db0a  http
 
 # Euro (German)
 euro      c50e4ae37441c60324d86c155a56b43a5d6b85b7f8985f77daa31aad53e102c1  https://web.archive.org/web/20021101153836id_/http://msdl.microsoft.com:80/msdownload/euro/31/de/WIN3EURO.EXE
+
+# German Windows for Workgroups 3.11 (OEM, 9 disks, WinWorld): only the
+# network setup files of disks 8 and 9 that the updates do not replace
+wfwde     ef52079d28770eb899ab7ca1b9f2fce81457b4ca630b0fe942b987606445305f  https://winworldpc.com/download/482c0967-4dc3-9d11-c3a6-e280947e5254/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2

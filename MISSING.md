@@ -18,7 +18,6 @@ Typische Adressen der deutschen Microsoft-Downloads (zum Suchen in der
 
 | Paket | Fehlt | Stand / Hinweis |
 |---|---|---|
-| NETWORK | **Dateien der deutschen WfW-3.11-Installationsdisketten** für `C:\WINDOWS\WINSETUP`: `LMSCRIPT.EX_`, `LMSCRIPT.PI_`, `LOGONOFF.EX_`, `NDDENB.DL_`, `NDISHLP.SY_`, `NETBEUI.38_`, `NETDDE.EX_`, `NETH.MS_`, `NETWATCH.EX_`, `NETWATCH.HL_`, `PMSPL.DL_`, `PROTMAN.DO_`, `PROTMAN.EX_`, `WFWAUDIT.DL_`, `WFWNETCP.CP_`, `WFWNET.DR_`, `WFWNET.HL_`, `WINCHAT.EX_`, `WINCHAT.HL_`, `WINMETER.EX_`, `WINPOPUP.EX_`, `WINPOPUP.HL_` | Kein Microsoft-Download bekannt. Ohne sie fragt die Netzwerkeinrichtung nach der WfW-Diskette. Spur: Diskettenabbilder der deutschen Vollversion im Internet Archive ([ms-wfw311-gr-retail](https://archive.org/details/ms-wfw311-gr-retail), [mswfw_3.11_de](https://archive.org/details/mswfw_3.11_de)). Das wären aber Dateien einer Vollversion, keine Updates: Entscheidung offen, ob die CD so etwas laden darf. |
 | NETWORK | **WFWFILES deutsch** (Update-Dateien aus `\CLIENTS\WFW\UPDATE` der deutschen Windows-NT-Server-3.51-CD): `NET.EXE`, `NET.MSG`, `NDIS.386`, `VREDIR.386`, `VSERVER.386`, `VNETSUP.386`, `NWNBLINK.386`, `NETAPI.DLL` | Jetzt englisch (`wfwfiles.exe` von conradshome.com); NET.EXE/NET.MSG deshalb nur auf Wunsch. |
 | NETWORK | Deutsche Fassungen von WG0970 (VNETBIOS.386), WG0971 (NDIS2SUP.386), WG0973 (RMM.D32), WG1001 (SERIAL.386), WG1027 (NWLINK.386) | Wahrscheinlich sprachneutral; zu prüfen, ob es DE-Fassungen gab. |
 | VBRUN | Deutsche Visual-Basic-Laufzeit (`VBRUN100.DLL`, `VBRUN200.DLL`, `VBRUN300.DLL`, `VB40016.DLL` deutsch) | Jetzt englisch. Kein deutscher Download gefunden (Suche Okt. 2026: nur DLL-Seiten und [archive.org/details/VBRUN300_EXE](https://archive.org/details/VBRUN300_EXE), englisch 3.0.5.38). Deutsche VB-3.0/4.0-Laufzeit nur von der deutschen VB-CD. |
@@ -52,6 +51,8 @@ sie nicht auf die CD.
 
 - TCP/IP-32 3.11b (TCP32B) und damit WINSOCK.DLL gab es nur englisch.
 - EURO: deutsches WIN3EURO eingebaut (Paket EURO).
+- NETWORK: die 22 Dateien der WfW-Disketten kommen aus der deutschen WfW 3.11
+  (OEM) von WinWorld (Disketten 8 und 9).
 
 ## 4. Bewusst weggelassen (andere Hersteller oder geänderte Microsoft-Dateien)
 

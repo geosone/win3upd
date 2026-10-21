@@ -156,7 +156,10 @@ function Expand-Archive2([string]$file, [string]$into) {
 function Find-Below([string]$dir, [string]$path) {
     $cur = $dir
     foreach ($part in ($path -split '[\\/]' | Where-Object { $_ })) {
-        $hit = Get-ChildItem -LiteralPath $cur -Force | Where-Object { $_.Name -ieq $part } | Select-Object -First 1
+        # a part with * or ? is a pattern (names with spaces: */DISK08.IMG)
+        $hit = Get-ChildItem -LiteralPath $cur -Force |
+            Where-Object { if ($part -match '[*?]') { $_.Name -like $part } else { $_.Name -ieq $part } } |
+            Select-Object -First 1
         if (-not $hit) { throw "Not found: $path (in $dir)" }
         $cur = $hit.FullName
     }
@@ -166,7 +169,8 @@ function Find-Below([string]$dir, [string]$path) {
 # a source: id:path[!path in that archive ...][#resource type]
 #   ctl3d:OBJ16/DLL/CTL3D.DLL     a file of the download ctl3d
 #   ww1140:PENTFIX.EXE#VXDRESOURCE  a resource of a Windows program
-# Files compressed with COMPRESS.EXE (SZDD, KWAJ) are expanded.
+# Files compressed with COMPRESS.EXE (SZDD, KWAJ) are expanded, unless the
+# resource type is RAW (setup disk files for the network setup: NETDDE.EX_).
 function Read-Source([string]$spec) {
     if ($spec -notmatch '^([\w-]+):([^#]+)(?:#(.+))?$') { throw "Invalid source: $spec" }
     $id, $path, $res = $Matches[1], $Matches[2], $Matches[3]
@@ -181,8 +185,8 @@ function Read-Source([string]$spec) {
         $file = Find-Below $inner $parts[$i]
     }
     $data = [IO.File]::ReadAllBytes($file)
-    if ($res) { $data = [GeosOne.Win3Upd.NeResource]::Extract($data, $res) }
-    if ([GeosOne.Gdi.MsExpand]::IsCompressed($data)) {
+    if ($res -and $res -ne 'RAW') { $data = [GeosOne.Win3Upd.NeResource]::Extract($data, $res) }
+    if ($res -ne 'RAW' -and [GeosOne.Gdi.MsExpand]::IsCompressed($data)) {
         $name = $null
         $data = [GeosOne.Gdi.MsExpand]::Expand($data, [IO.Path]::GetFileName($file), [ref]$name)
     }
