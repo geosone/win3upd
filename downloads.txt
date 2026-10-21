@@ -51,6 +51,20 @@ wnt4de    11c5bb1f26782854bbef897d5ce6ffefc8aeff48caf1d8b6cc7dbd984aef1bb2  http
 # German Internet Explorer 5 for Windows 3.1 (gaby.de; the copies in the
 # Internet Archive are the English ones)
 ie5core   95061a51c0c673bf2ac06dc3d54ac38112811b0118b664757d27b8f115b3e47c  http://www.gaby.de/ftp/pub/win3x/ie5/iecore.cab
+# Internet Explorer 5 (16 bit), German setup files of gaby.de (complete set
+# after its readme; PRESU.CAB of the English download is not part of it)
+ie5setup  4536877370a3a252ac38e789ee10befc317fd461cedda9ba732a2b05108a1839  http://www.gaby.de/ftp/pub/win3x/ie5/setup.exe  ie5-setup.exe
+ie5ini    7650642ad5a3a731526695ca2ca3b4eb5f76bf58dcea517cf799df96be61c078  http://www.gaby.de/ftp/pub/win3x/ie5/iesetup.ini  ie5-iesetup.ini
+ie5list   67c5ef8a26b75e0f98ddec7f035898ee5aed7e2483aaab03a5696e0fe1f89e8b  http://www.gaby.de/ftp/pub/win3x/ie5/filelist.dat  ie5-filelist.dat
+ie5cif    2211ccd2bb6f5510d75beb6f7ff815e781f4e9456f6d81b46d2c94ec381900a0  http://www.gaby.de/ftp/pub/win3x/ie5/iecif.cab
+ie5ole    bf21d5a9d06f218830ba687f696be556bc2d004ae17b38ad8f7d119bd886558a  http://www.gaby.de/ftp/pub/win3x/ie5/ole.cab
+ie5browser 4e2092385d987d1254729641d0cfaf2afe314d581105c6503fbb44e3e3cd3669  http://www.gaby.de/ftp/pub/win3x/ie5/browser.cab
+ie5mshtml c2e005ce7e1d260c0d4a34a0b9114ba5bcdd466603d31c62ffc37f3374d9f95b  http://www.gaby.de/ftp/pub/win3x/ie5/mshtml16.cab
+ie5mail   8d25dca321b037200cef977c58723a5aeb7828ce5b10f541c96b9e1dcfc5462e  http://www.gaby.de/ftp/pub/win3x/ie5/mailnews.cab
+ie5stack  d246e11cb88b6d0ad1a6f0e425e750d679c58e7f398f2d09537f8da2a408e1fc  http://www.gaby.de/ftp/pub/win3x/ie5/stacknd.cab
+ie5mdm    79b24cb3e28f84f7a48d92145c2829a842f3e34f231c9438c770162161a25fac  http://www.gaby.de/ftp/pub/win3x/ie5/mdminf.cab
+ie5java   026737c621a0399e4974670720933abd66ebb91bb184c8851be33130f7dd2fb9  http://www.gaby.de/ftp/pub/win3x/ie5/java.cab
+ie5se128  e6dc55df7836da7b916d831f7c657ffad32b153e27d102a459d85fa1587405e2  http://www.gaby.de/ftp/pub/win3x/ie5/se128-16.exe
 
 # Microsoft Visual C++ 2.2 Upgrade (CD image, WinWorld): the Win32s versions
 # of the Visual C++ 2.x runtime and MFC 3.0 (\WIN32S\REDIST)

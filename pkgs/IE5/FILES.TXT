@@ -1,0 +1,15 @@
+; Ziel                          Quelle: deutsches Internet Explorer 5 (16 Bit), gaby.de
+%DIR%\SETUP.EXE                 ie5setup:
+%DIR%\IESETUP.INI               ie5ini:
+%DIR%\FILELIST.DAT              ie5list:
+%DIR%\IESETUP.DIR               local:IESETUP.DIR
+%DIR%\IECIF.CAB                 ie5cif:
+%DIR%\OLE.CAB                   ie5ole:
+%DIR%\IECORE.CAB                ie5core:
+%DIR%\BROWSER.CAB               ie5browser:
+%DIR%\MSHTML16.CAB              ie5mshtml:
+%DIR%\MAILNEWS.CAB              ie5mail:
+%DIR%\STACKND.CAB               ie5stack:
+%DIR%\MDMINF.CAB                ie5mdm:
+%DIR%\JAVA.CAB                  ie5java:
+%DIR%\SE128-16.EXE              ie5se128:

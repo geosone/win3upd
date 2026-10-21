@@ -6,7 +6,23 @@ DefaultDir=%WINDIR%\UPDATES\MSPAINT
 Windows=no
 
 [Welcome]
-Paint von Windows 95 (4.00.950, deutsch), mit einem Symbol in der Gruppe Zubehör. Braucht Win32s und die Visual-C++-Laufzeit.
+Paint von Windows 95 (4.00.950, deutsch), mit einem Symbol in der Gruppe Zubehör. Es bearbeitet auch eingebettete Paintbrush-Bilder; nach dem Entfernen tut das wieder Paintbrush. Braucht Win32s und die Visual-C++-Laufzeit.
 
 [ProgMan]
 Item=|Zubehör|Paint|%WINDIR%\WIN95APP\MSPAINT.EXE
+
+; Paint registriert sich beim ersten Start selbst als OLE-Server für
+; Paintbrush-Bilder. Diese Werte setzt schon das Setup, damit INSTALL /U die
+; vorherigen (PBRUSH.EXE) wiederherstellt.
+[Win.ini]
+Set=|embedding|PBrush=Paintbrush-Bild,Paintbrush-Bild,%WINDIR%\WIN95APP\MSPAINT.EXE,picture
+
+[Registry]
+Set=|HKCR|PBrush\protocol\StdFileEditing\server|@|SZ|%WINDIR%\WIN95APP\MSPAINT.EXE
+Set=|HKCR|Paint.Picture\CLSID|@|SZ|{D3E34B21-9D75-101A-8C3D-00AA001A1652}
+Set=|HKCR|Paint.Picture\Insertable|@|SZ|
+Set=|HKCR|Paint.Picture\protocol\StdFileEditing\server|@|SZ|%WINDIR%\WIN95APP\MSPAINT.EXE
+Set=|HKCR|Paint.Picture\protocol\StdFileEditing\verb\0|@|SZ|&Edit
+Set=|HKCR|Paint.Picture\shell\PrintTo\command|@|SZ|"%WINDIR%\WIN95APP\MSPAINT.EXE" /pt "%1" "%2" "%3" "%4"
+Set=|HKCR|Paint.Picture\shell\open\command|@|SZ|"%WINDIR%\WIN95APP\MSPAINT.EXE" "%1"
+Set=|HKCR|Paint.Picture\shell\print\command|@|SZ|"%WINDIR%\WIN95APP\MSPAINT.EXE" /p "%1"

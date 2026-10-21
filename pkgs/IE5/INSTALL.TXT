@@ -1,0 +1,17 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Internet Explorer 5
+Id=W3U-IE5
+DefaultDir=%WINDIR%\UPDATES\IE5
+
+[Welcome]
+Der deutsche Internet Explorer 5.0 für Windows 3.1 (16 Bit, Version 5.0.913.2207) mit Outlook Express, DFÜ-Netzwerk (Dialer und Winsock) und Java.
+Er hat ein eigenes Setup von Microsoft: Seine Dateien kommen in das Zielverzeichnis, und das Setup startet danach unter Windows von selbst (bei einer Installation aus MS-DOS beim nächsten Start von Windows). Das Symbol "Internet Explorer 5 installieren" in der Hauptgruppe startet es erneut. Nach dem Setup macht "128-Bit-Verschlüsselung installieren" den Internet Explorer sicher für HTTPS mit 128 Bit (statt 40/56).
+Den Internet Explorer entfernt man mit dessen eigenem Deinstallationsprogramm; dieses Paket entfernt nur die Setup-Dateien.
+
+[Run]
+Windows=%DIR%\SETUP.EXE
+
+[ProgMan]
+Item=|Hauptgruppe|Internet Explorer 5 installieren|%DIR%\SETUP.EXE
+Item=|Hauptgruppe|128-Bit-Verschlüsselung installieren|%DIR%\SE128-16.EXE

@@ -30,7 +30,7 @@ itself (`tools/W3Build.cs`).
     %WINDIR%\SYSTEM\CTL3D.DLL           ctl3d:OBJ16/DLL/CTL3D.DLL
     1|%WINDIR%\WINFILE.EXE              wfwy2kde:WINFILE.Y2K
 
-A source is `download-id:path` in the unpacked download, `!path` goes into
+A source is `download-id:path` in the unpacked download (`download-id:` is the downloaded file itself, e.g. a CAB), `!path` goes into
 an archive inside it, `#TYPE` takes a resource of a Windows program
 (`ww1140:PENTFIX.EXE#VXDRESOURCE`). Files compressed with COMPRESS.EXE
 (SZDD, KWAJ) are expanded. `local:FILE` is a text of the package
@@ -54,6 +54,7 @@ setup (dependencies first; `off|NAME` is not selected at first).
 | FAT32 | R. Loew's FAT32 patch of WIN386.EXE, explained in WIN386.TXT (not selected at first) | German text |
 | FONTVIEW | Font viewer of Windows 95 (Win32s) | German |
 | FREECELL | FreeCell of Windows 95 (Win32s) | German |
+| IE5 | Internet Explorer 5.0 (16 bit) with Outlook Express, dialer and Java: its own setup starts under Windows (`[Run] Windows=`), a Program Manager item starts it again; the 128-bit encryption update (SE128-16.EXE) as an item for after the setup | German |
 | MSPAINT | Paint of Windows 95 (Win32s) | German |
 | MSVCRT | Visual C++ 2.x runtime and MFC 3.0 for Win32s (Visual C++ 2.2) | neutral |
 | NETWORK | WfW 3.11 only: TCP/IP-32 3.11b and the NT 3.51 client updates for the network setup (`C:\WINDOWS\WINSETUP`), installed network drivers replaced, NDIS.386 patched for fast CPUs (patcher9x, explained in NDIS.TXT), NET.EXE of NT 3.51 with the German messages of NET.MSG | English, messages German |

@@ -64,8 +64,8 @@ $cp850 = [Text.Encoding]::GetEncoding(850)
 
 function ConvertTo-DosText([string]$text) {
     $t = ($text -replace "`r`n", "`n" -replace "`n", "`r`n")
-    if (-not $t.EndsWith("`r`n")) { $t += "`r`n" }
-    return $cp850.GetBytes($t)
+    if ($t -and -not $t.EndsWith("`r`n")) { $t += "`r`n" }   # an empty file stays empty (IESETUP.DIR)
+    return , $cp850.GetBytes($t)
 }
 
 function Read-Utf8([string]$path) {
@@ -170,12 +170,14 @@ function Find-Below([string]$dir, [string]$path) {
 # a source: id:path[!path in that archive ...][#resource type]
 #   ctl3d:OBJ16/DLL/CTL3D.DLL     a file of the download ctl3d
 #   ww1140:PENTFIX.EXE#VXDRESOURCE  a resource of a Windows program
+#   ie5browser:                   the download itself, not unpacked (a CAB)
 # Files compressed with COMPRESS.EXE (SZDD, KWAJ) are expanded, unless the
 # resource type is RAW (setup disk files for the network setup: NETDDE.EX_).
 function Read-Source([string]$spec) {
-    if ($spec -notmatch '^([\w-]+):([^#]+)(?:#(.+))?$') { throw "Invalid source: $spec" }
+    if ($spec -notmatch '^([\w-]+):([^#]*)(?:#(.+))?$') { throw "Invalid source: $spec" }
     $id, $path, $res = $Matches[1], $Matches[2], $Matches[3]
     $dl = Get-Download $id
+    if (-not $path) { return , [IO.File]::ReadAllBytes($dl) }
     $dir = Join-Path $Cache "x/$($id.ToLowerInvariant())"
     Expand-Archive2 $dl $dir
     $parts = $path -split '!'
