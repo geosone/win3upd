@@ -1,0 +1,30 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Netzwerk-Updates für Windows für Workgroups 3.11
+Id=W3U-NETWORK
+DefaultDir=%WINDIR%\UPDATES\NETWORK
+Windows=no
+Done=Die Netzwerk-Updates sind installiert. TCP/IP-32 richten Sie in der Netzwerkeinrichtung (Netzwerk-Gruppe) mit "Treiber..." und "Protokoll hinzufügen" ein; die Dateien liegen in C:\WINDOWS\WINSETUP.
+
+[Welcome]
+Nur für Windows für Workgroups 3.11 (unter Windows 3.1 ändert dieses Paket nichts). Es enthält:
+
+- TCP/IP-32 3.11b (Protokoll für die Netzwerkeinrichtung, englisch)
+- die Updates von Windows NT Server 3.51 (\CLIENTS\WFW\UPDATE): NDIS.386, VREDIR.386, VSERVER.386, VNETSUP.386, NWNBLINK.386, NETAPI.DLL, NET.EXE (englisch, nur auf Wunsch)
+- RMM.D32 (WG0973), SERIAL.386 (WG1001), VNETBIOS.386 (WG0970), NDIS2SUP.386 (WG0971), NWLINK.386 (WG1027)
+
+Installierte Netzwerkdateien werden ersetzt, die übrigen liegen für die Netzwerkeinrichtung in C:\WINDOWS\WINSETUP. NDIS.386 wird mit dem Patch aus patcher9x (Jaroslav Hensl, MIT-Lizenz) für schnelle Prozessoren angepasst: Sonst bricht der Start von Windows mit Netzwerk ab.
+
+[Options]
+Option=off|NET.EXE und NET.MSG durch die englische Fassung ersetzen
+
+[Find]
+WFW=WFWSYS.CFG
+
+[Win.ini]
+Set=?WFW|winsetup|source_disk_path=%WINDIR%\WINSETUP
+
+[HexPatch]
+; patcher9x PATCH_CPU_SPEED_NDIS_V4 (MIT, Copyright (c) 2022 Jaroslav Hensl)
+PatchIfPresent=?WFW|%WINDIR%\SYSTEM\NDIS.386|B9 00 00 10 00 90 E2 FE CD 20 3F 00 01 00 2B C2 B9 E8 03 00 00 F7 E1 A3|B9 00 00 40 06 E2 FE CD 20 3F 00 01 00 29 D0 75 01 40 6A 0A 59 F7 E1 A3|1
+PatchIfPresent=?WFW|%WINDIR%\WINSETUP\NDIS.386|B9 00 00 10 00 90 E2 FE CD 20 3F 00 01 00 2B C2 B9 E8 03 00 00 F7 E1 A3|B9 00 00 40 06 E2 FE CD 20 3F 00 01 00 29 D0 75 01 40 6A 0A 59 F7 E1 A3|1

@@ -33,13 +33,19 @@ itself (`tools/W3Build.cs`).
 A source is `download-id:path` in the unpacked download, `!path` goes into
 an archive inside it, `#TYPE` takes a resource of a Windows program
 (`ww1140:PENTFIX.EXE#VXDRESOURCE`). Files compressed with COMPRESS.EXE
-(SZDD, KWAJ) are expanded. `pkgs/ORDER.TXT` gives the order of the combined
-setup (dependencies first).
+(SZDD, KWAJ) are expanded. `local:FILE` is a text of the package
+(`pkgs/<NAME>/FILE`, UTF-8, written in code page 850), `-"text"` after the
+source removes that text from it (OEMSETUP.INF without WINSOCK.DLL). The
+same source for several targets is stored once. `pkgs/ORDER.TXT` gives the order of the combined
+setup (dependencies first; `off|NAME` is not selected at first).
 
 | Package | Content | Language |
 |---|---|---|
 | CTL3D | CTL3D.DLL, CTL3DV2.DLL, CTL3D32.DLL | neutral |
 | DVA | DVA.386 from Video for Windows 1.1e | neutral |
+| FAT32 | R. Loew's FAT32 patch of WIN386.EXE, explained in WIN386.TXT (not selected at first) | German text |
+| NETWORK | WfW 3.11 only: TCP/IP-32 3.11b and the NT 3.51 client updates for the network setup (`C:\WINDOWS\WINSETUP`), installed network drivers replaced, NDIS.386 patched for fast CPUs (patcher9x, explained in NDIS.TXT) | English |
+| WINSOCK | WINSOCK.DLL from TCP/IP-32 3.11b | English |
 | VBRUN | Visual Basic runtimes 1.0 to 4.0 | English |
 | VSHARE | VSHARE.386 3.11.0.402 | neutral |
 | WIN87EM | WIN87EM.DLL fix for 80387 (WW0548) | neutral |
@@ -51,6 +57,8 @@ setup (dependencies first).
 `test/vm.sh PACKAGE ...` (or `ALL` for the combined setup) installs into a
 copy of a Windows 3.11 hard disk image in QEMU from MS-DOS, starts Windows,
 removes the packages with `INSTALL /U` and starts Windows again
-(`WIN311IMG`, results in `out/vm`).
+(`WIN311IMG`, results in `out/vm`). `SEED=dir` copies files into
+`C:\WINDOWS` first, e.g. the network drivers of a WfW installation so that
+NETWORK replaces and patches them.
 
 Copyright (C) 2026 GeosOne. GNU General Public License version 3.

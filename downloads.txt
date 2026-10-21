@@ -17,3 +17,12 @@ wv1160    45a98dd5dfa01af6d6a5a40d9aac5aebc4c0f48f7a1971a9986e7dbeaaa868f7  http
 # German
 wfwy2kde  5a0e38a4542bc564ce3d00da27478f1a4e3eebb578915539ba464d2b8e7b7433  https://web.archive.org/web/20030121062356id_/http://download.microsoft.com/download/wfw311/Update/3.11.0.304/WIN/DE/WFWY2KDE.EXE
 w31y2kde  57b1baeeea61e2e14552899145fd18cb3ac6222606efabc3ed3e4e42fd794a62  https://web.archive.org/web/20030216151918id_/http://download.microsoft.com/download/win31/Update/3.10.0.103/W31/DE/W31Y2KDE.EXE
+
+# Network (Windows for Workgroups 3.11, English)
+tcp32b    50c4a4b5230725ce2693038b132777160d6de61891c834546747afae1cc78631  https://web.archive.org/web/20020608113502id_/http://download.microsoft.com:80/download/wfw311/update/3.11b/wfw/en-us/tcp32b.exe
+wfwfiles  7077664c559f88793a7913b93cc2fe0ead1c0fdc29ce605bf4d18f5d49b9e9f1  https://web.archive.org/web/20140207040103id_/http://www.conradshome.com/win31/files/wfwfiles.exe
+wg0970    53f8a20511bb028a0b15b4957e32d86395ae0ff27626d8e192e078b8de8a858a  https://web.archive.org/web/20140207041140id_/http://www.conradshome.com/win31/archive/softlib/wg0970.exe
+wg0971    fb8c6e71bdb07cd63ea10257cdd2ec6d9a23c63aa316921c55594a7f0581fbff  https://web.archive.org/web/20140207041140id_/http://www.conradshome.com/win31/archive/softlib/wg0971.exe
+wg0973    a76363b8dd2477e6901fa5322d3a4f6a91e3e76453edb6878c04c01dbeae3e52  https://web.archive.org/web/20140207041141id_/http://www.conradshome.com/win31/archive/softlib/wg0973.exe
+wg1001    a0a016b4937322b6b9624ee4cfc86f661f442f6e4ca97ef3479d7760a97ea3c7  https://web.archive.org/web/20140207041144id_/http://www.conradshome.com/win31/archive/softlib/wg1001.exe
+wg1027    2d7e817d9ade474a42695f9f1f65df0013ac7f420a3721752835b0c2dcf0db0a  https://web.archive.org/web/20140207041145id_/http://www.conradshome.com/win31/archive/softlib/wg1027.exe

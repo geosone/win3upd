@@ -1,6 +1,6 @@
 ; Reihenfolge der Pakete im gemeinsamen Installer (INSTALL.EXE im
 ; Hauptverzeichnis der CD): Voraussetzungen zuerst.  Nicht aufgeführte
-; Pakete folgen alphabetisch.
+; Pakete folgen alphabetisch. off|NAME: zu Beginn nicht ausgewählt.
 VSHARE
 WIN87EM
 CTL3D
@@ -8,3 +8,6 @@ DVA
 WING
 VBRUN
 WINFILE
+WINSOCK
+NETWORK
+off|FAT32

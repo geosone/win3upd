@@ -1,0 +1,1 @@
+%WINDIR%\SYSTEM\WIN386.TXT          local:WIN386.TXT

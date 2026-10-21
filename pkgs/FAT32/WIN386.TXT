@@ -1,0 +1,27 @@
+FAT32-Patch für WIN386.EXE
+==========================
+
+Installiert von der Windows 3.1x Update-CD (Paket FAT32).
+
+Geändert: C:\WINDOWS\SYSTEM\WIN386.EXE
+Original: C:\WINDOWS\SYSTEM\WIN386.G01
+
+Windows 3.1 und 3.11 brechen im erweiterten Modus ab, wenn sie von einem
+FAT32-Laufwerk (MS-DOS 7.1) gestartet werden. Ursache ist ein Befehl, der
+die Clusterzahl des Laufwerks als 16-Bit-Wert (FFFFh) setzt. Der Patch nach
+311FAT32.COM von Rudolph R. Loew ersetzt ihn an beiden Stellen:
+
+  vorher:  66 C7 46 49 FF FF    mov  word [bp+49h], FFFFh
+  nachher: 6A FF 8F 46 49 90    push FFFFh / pop [bp+49h] / nop
+
+Das Setup sucht genau diese Bytefolge; sie muss zweimal vorkommen. Die
+Stellen hängen von der Fassung ab, z. B.:
+
+  Windows 3.1 deutsch (546837 Bytes):            5F226h, 5F438h
+  Windows für Workgroups 3.11 deutsch (579605):  66226h, 66438h
+
+Eine unbekannte oder schon teilweise geänderte Datei wird nicht angefasst.
+
+Rückgängig machen: C:\WINDOWS\UPDATES\FAT32\INSTALL.EXE /U unter MS-DOS.
+Das Setup prüft die beiden Stellen und stellt die ursprünglichen Bytes
+wieder her.

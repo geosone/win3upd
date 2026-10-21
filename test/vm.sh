@@ -6,7 +6,8 @@
 #   test/vm.sh ALL                  the combined INSTALL.EXE of the CD
 # Environment: WIN311IMG (hard disk image, FAT partition at sector 63,
 # Windows in C:\WINDOWS; AUTOEXEC.BAT is replaced), KEYS (install keys per
-# package, default: 5x Enter), START, TIMEOUT
+# package, default: 5x Enter), UNKEYS, SEED (a directory copied into
+# C:\WINDOWS first, e.g. network files to be updated), START, TIMEOUT
 set -uo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 OUT=$ROOT/out/vm
@@ -17,6 +18,7 @@ rm -rf "$OUT"; mkdir -p "$OUT/files"
 cp "$IMG" "$OUT/hd.img"; P="$OUT/hd.img@@32256"
 crlf() { sed 's/$/\r/'; }
 mmd -i "$P" ::/CD 2>/dev/null
+[ -n "${SEED:-}" ] && { mcopy -s -o -i "$P" "$SEED"/* ::/WINDOWS/ || exit 1; }
 ALL=
 if [ "$1" = ALL ]; then
     ALL=1

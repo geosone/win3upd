@@ -65,3 +65,4 @@ InstMissing=fehlt
 InstCancelled=abgebrochen
 InstFailed=fehlgeschlagen
 InstNeedDos=nur unter MS-DOS
+NoMemory=Nicht genügend Arbeitsspeicher.

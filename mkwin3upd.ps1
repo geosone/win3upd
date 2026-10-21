@@ -142,6 +142,12 @@ function Expand-Archive2([string]$file, [string]$into) {
         } catch {
             throw "Cannot unpack $($file):`n$($log -join "`n")"
         }
+        # DOS ZIPs carry no Unix modes, but .NET takes them from the attributes
+        if ([IO.Path]::DirectorySeparatorChar -eq '/') {
+            Get-ChildItem -LiteralPath $into -Recurse -File | ForEach-Object {
+                [IO.File]::SetUnixFileMode($_.FullName, [IO.UnixFileMode]'UserRead, UserWrite, GroupRead, OtherRead')
+            }
+        }
     }
     [IO.File]::WriteAllText($done, '')
 }
@@ -213,20 +219,40 @@ foreach ($name in $names) {
     $used = @{}
     foreach ($l in ((Read-Utf8 (Join-Path $src 'FILES.TXT')) -split "`r?`n")) {
         if ($l -match '^\s*(;|$)') { continue }
-        if ($l -notmatch '^\s*(?:([^|\s]*)\|)?(\S+)\s+(\S+)\s*$') { throw "$name\FILES.TXT: invalid line: $l" }
-        $cond, $target, $spec = $Matches[1], $Matches[2], $Matches[3]
+        if ($l -notmatch '^\s*(?:([^|\s]*)\|)?(\S+)\s+(\S+)(?:\s+-"([^"]+)")?\s*$') { throw "$name\FILES.TXT: invalid line: $l" }
+        $cond, $target, $spec, $cut = $Matches[1], $Matches[2], $Matches[3], $Matches[4]
         $base = ($target -split '\\')[-1].ToUpperInvariant()
-        # the same name twice (alternatives): in A\, B\, ...
-        $cdName = $base
-        for ($n = 0; $used.ContainsKey($cdName); $n++) { $cdName = "$([char](65 + $n))\$base" }
-        $used[$cdName] = $true
-        $data = Read-Source $spec
-        $target2 = Join-Path $dst $cdName
-        New-Item -ItemType Directory -Force -Path (Split-Path $target2) | Out-Null
-        [IO.File]::WriteAllBytes($target2, $data)
+        $key = "$spec -$cut"
+        if ($used.ContainsKey($key)) {
+            # the same file for another target: once on the CD
+            $cdName = $used[$key]
+        } else {
+            # the same name twice (alternatives): in A\, B\, ...
+            $cdName = $base
+            for ($n = 0; $used.ContainsValue($cdName); $n++) { $cdName = "$([char](65 + $n))\$base" }
+            $used[$key] = $cdName
+            if ($spec -match '^local:(.+)$') {
+                # a text of this package (UTF-8): code page 850, CR LF
+                $data = ConvertTo-DosText (Read-Utf8 (Join-Path $src $Matches[1]))
+            } else {
+                $data = Read-Source $spec
+            }
+            if ($cut) {
+                # -"text": a text file without this text (OEMSETUP.INF)
+                $t = [Text.Encoding]::GetEncoding(28591).GetString($data)
+                if (-not $t.Contains($cut)) { throw "$name\FILES.TXT: not in $($spec): $cut" }
+                $data = [Text.Encoding]::GetEncoding(28591).GetBytes($t.Replace($cut, ''))
+            }
+            $target2 = Join-Path $dst $cdName
+            New-Item -ItemType Directory -Force -Path (Split-Path $target2) | Out-Null
+            [IO.File]::WriteAllBytes($target2, $data)
+        }
         $files += $(if ($null -ne $cond) { "$cond|" } else { '' }) + "$cdName=$target"
     }
     $text = $ini.TrimEnd() + "`n`n[Files]`n" + ($files -join "`n") + "`n`n" + $textDe
+    # the engine reads lines of up to 511 characters
+    $long = @($text -split "`n" | Where-Object { $_.Length -gt 500 })
+    if ($long.Count) { throw "$name\INSTALL.TXT: line longer than 500 characters: $($long[0].Substring(0, 40))..." }
     [IO.File]::WriteAllBytes((Join-Path $dst 'INSTALL.INI'), (ConvertTo-DosText $text))
     Copy-Item -LiteralPath $Installer -Destination (Join-Path $dst 'INSTALL.EXE')
     $product = if ($ini -match '(?m)^Product=(.*)$') { $Matches[1].Trim() } else { $name }
@@ -235,10 +261,12 @@ foreach ($name in $names) {
 
 # the combined setup: INSTALL.EXE in the root, [Installer] lists the
 # packages in the order of pkgs\ORDER.TXT
+# ("off|NAME": not selected at first)
 $order = @((Read-Utf8 (Join-Path $pkgRoot 'ORDER.TXT')) -split "`r?`n" |
     Where-Object { $_ -notmatch '^\s*(;|$)' } | ForEach-Object { $_.Trim().ToUpperInvariant() } |
-    Where-Object { $names -contains $_ })
-$order += @($names | Where-Object { $order -notcontains $_ })
+    Where-Object { $names -contains ($_ -replace '^OFF\|', '') } | ForEach-Object { $_ -replace '^OFF\|', 'off|' })
+$listed = @($order | ForEach-Object { $_ -replace '^off\|', '' })
+$order += @($names | Where-Object { $listed -notcontains $_ })
 $inst = @()
 for ($i = 0; $i -lt $order.Count; $i++) { $inst += "Inst$($i + 1)=$($order[$i])" }
 $main = (Read-Utf8 (Join-Path $PSScriptRoot 'INSTALL.TXT')).TrimEnd() + "`n`n[Installer]`n" + ($inst -join "`n") + "`n`n" + $textDe

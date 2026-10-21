@@ -1,0 +1,10 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Windows Sockets (WINSOCK.DLL aus TCP/IP-32 3.11b)
+Id=W3U-WINSOCK
+DefaultDir=%WINDIR%\UPDATES\WINSOCK
+Windows=no
+Done=WINSOCK.DLL ist installiert.
+
+[Welcome]
+WINSOCK.DLL ist die Windows-Sockets-Schnittstelle für Internetprogramme (z. B. Internet Explorer 5). Sie stammt aus TCP/IP-32 3.11b für Windows für Workgroups und läuft auch unter Windows 3.1. Englische Fassung.

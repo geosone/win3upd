@@ -1,0 +1,43 @@
+CPU-Patch für NDIS.386
+======================
+
+Installiert von der Windows 3.1x Update-CD (Paket NETWORK).
+
+Geändert: C:\WINDOWS\SYSTEM\NDIS.386 (die Fassung aus dem Update von
+          Windows NT Server 3.51) und die Kopie für die Netzwerkeinrichtung
+          in C:\WINDOWS\WINSETUP\NDIS.386
+Original: C:\WINDOWS\SYSTEM\NDIS.G01 ist die NDIS.386 von vor dem Update;
+          die ungepatchte neue Fassung liegt als NDIS.G02 daneben.
+
+NDIS.386 misst beim Start von Windows die Geschwindigkeit des Prozessors:
+Es zählt eine Schleife mit 1 048 576 Durchläufen und rechnet die Zeit mal
+1000 in Mikrosekunden um. Auf schnellen Prozessoren dauert die Schleife
+weniger als eine Millisekunde, das Ergebnis ist 0 und Windows stürzt mit
+Netzwerk beim Start ab ("Division durch Null"; WIN /N startet ohne Netz).
+
+Der Patch aus patcher9x (PATCH_CPU_SPEED_NDIS_V4, Jaroslav Hensl,
+MIT-Lizenz, https://github.com/JHRobotics/patcher9x) ändert 24 Bytes:
+
+  vorher:  B9 00 00 10 00 90  mov ecx, 100000h    ; 1 048 576 Durchläufe
+           E2 FE              loop $
+           CD 20 3F 00 01 00  VxDCall Get_System_Time
+           2B C2              sub eax, edx
+           B9 E8 03 00 00     mov ecx, 1000
+           F7 E1 A3           mul ecx / mov [...], eax
+
+  nachher: B9 00 00 40 06     mov ecx, 6400000h   ; 100-mal so viele
+           E2 FE              loop $
+           CD 20 3F 00 01 00  VxDCall Get_System_Time
+           29 D0              sub eax, edx
+           75 01 40           jnz +1 / inc eax    ; nie 0
+           6A 0A 59           push 10 / pop ecx   ; mal 10 statt mal 1000
+           F7 E1 A3           mul ecx / mov [...], eax
+
+Die Schleife läuft 100-mal so lange, dafür wird mit 10 statt 1000
+multipliziert: Das Ergebnis bleibt gleich groß, ist aber nie 0. Die
+Bytefolge steht in allen Sprachfassungen von NDIS.386 einmal (meist bei
+5E0Ah). Eine unbekannte NDIS.386 wird nicht angefasst.
+
+Rückgängig machen: C:\WINDOWS\UPDATES\NETWORK\INSTALL.EXE /U unter MS-DOS.
+Das Setup prüft die Bytes, stellt sie wieder her und bringt die alten
+Netzwerkdateien zurück.
