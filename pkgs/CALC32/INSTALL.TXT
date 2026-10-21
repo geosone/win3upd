@@ -1,0 +1,12 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Rechner aus Windows 95 (32 Bit)
+Id=W3U-CALC32
+DefaultDir=%WINDIR%\UPDATES\CALC32
+Windows=no
+
+[Welcome]
+Der Rechner von Windows 95 (4.00.950, deutsch) als CALC32.EXE neben dem Rechner von Windows 3.1, mit einem Symbol in der Gruppe Zubehör. Braucht Win32s.
+
+[ProgMan]
+Item=|Zubehör|Rechner (32 Bit)|%WINDIR%\WIN95APP\CALC32.EXE

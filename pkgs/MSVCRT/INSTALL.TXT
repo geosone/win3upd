@@ -1,0 +1,9 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Visual-C++-2.x-Laufzeit für Win32s
+Id=W3U-MSVCRT
+DefaultDir=%WINDIR%\UPDATES\MSVCRT
+Windows=no
+
+[Welcome]
+Die Laufzeitbibliotheken von Visual C++ 2.x (MSVCRT20.DLL 2.10, MFC30.DLL und die MFC-Hilfsbibliotheken) in der Fassung für Win32s, aus Visual C++ 2.2 (\WIN32S\REDIST). Die Fassungen aus Windows 95 und NT laufen unter Win32s nicht. WordPad, Paint und FontView brauchen sie. Braucht Win32s.

@@ -1,0 +1,13 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Schriftartenanzeige aus Windows 95 (32 Bit)
+Id=W3U-FONTVIEW
+DefaultDir=%WINDIR%\UPDATES\FONTVIEW
+Windows=no
+
+[Welcome]
+Die Schriftartenanzeige von Windows 95 (FONTVIEW.EXE, deutsch). FON- und FOT-Dateien werden damit geöffnet (TrueType-Dateien kann sie unter Win32s nicht anzeigen). Braucht Win32s und die Visual-C++-Laufzeit.
+
+[Win.ini]
+Set=|Extensions|fon=%WINDIR%\WIN95APP\FONTVIEW.EXE ^.fon
+Set=|Extensions|fot=%WINDIR%\WIN95APP\FONTVIEW.EXE ^.fot

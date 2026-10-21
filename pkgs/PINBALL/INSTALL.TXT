@@ -1,0 +1,12 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=3D-Pinball aus Windows NT 4.0 (32 Bit)
+Id=W3U-PINBALL
+DefaultDir=%WINDIR%\UPDATES\PINBALL
+Windows=no
+
+[Welcome]
+3D-Pinball (Space Cadet) von Windows NT 4.0 (deutsch), mit einem Symbol in der Gruppe Spiele. Braucht Win32s.
+
+[ProgMan]
+Item=|Spiele|3D-Pinball|%WINDIR%\PINBALL\PINBALL.EXE

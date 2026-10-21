@@ -1,0 +1,1 @@
+%WINDIR%\WIN95APP\FONTVIEW.EXE    w95de:*.iso!Win95/win95_02.cab!fontview.exe

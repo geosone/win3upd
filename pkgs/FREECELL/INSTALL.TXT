@@ -1,0 +1,12 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=FreeCell aus Windows 95 (32 Bit)
+Id=W3U-FREECELL
+DefaultDir=%WINDIR%\UPDATES\FREECELL
+Windows=no
+
+[Welcome]
+Das Kartenspiel FreeCell von Windows 95 (deutsch), mit einem Symbol in der Gruppe Spiele. Die 32-Bit-CARDS.DLL liegt neben FREECELL.EXE und ersetzt nicht die von Solitär. Braucht Win32s.
+
+[ProgMan]
+Item=|Spiele|FreeCell|%WINDIR%\WIN95APP\FREECELL.EXE

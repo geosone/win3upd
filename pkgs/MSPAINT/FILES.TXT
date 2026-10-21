@@ -1,0 +1,3 @@
+%WINDIR%\WIN95APP\MSPAINT.EXE   w95de:*.iso!Win95/win95_02.cab!mspaint.exe
+%WINDIR%\WIN95APP\MSPAINT.HLP   w95de:*.iso!Win95/win95_02.cab!mspaint.hlp
+%WINDIR%\WIN95APP\MSPAINT.CNT   w95de:*.iso!Win95/win95_02.cab!mspaint.cnt

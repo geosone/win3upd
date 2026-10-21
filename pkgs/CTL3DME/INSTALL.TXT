@@ -1,0 +1,11 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=CTL3D 2.31 (aus Windows ME)
+Id=W3U-CTL3DME
+Version=2.31
+DefaultDir=%WINDIR%\UPDATES\CTL3DME
+Windows=no
+Done=CTL3D 2.31 ist installiert.
+
+[Welcome]
+Die neuesten Fassungen der 3D-Steuerelemente (CTL3D.DLL, CTL3DV2.DLL und CTL3D32.DLL für Win32s), aus der deutschen Windows-ME-CD. Ersetzt die Fassung 2.05 des Pakets CTL3D.

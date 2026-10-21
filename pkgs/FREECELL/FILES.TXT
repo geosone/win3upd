@@ -1,0 +1,3 @@
+%WINDIR%\WIN95APP\FREECELL.EXE  w95de:*.iso!Win95/win95_02.cab!freecell.exe
+%WINDIR%\WIN95APP\FREECELL.HLP  w95de:*.iso!Win95/win95_02.cab!freecell.hlp
+%WINDIR%\WIN95APP\CARDS.DLL     w95de:*.iso!Win95/win95_02.cab!cards.dll

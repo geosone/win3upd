@@ -1,0 +1,12 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Paint aus Windows 95 (32 Bit)
+Id=W3U-MSPAINT
+DefaultDir=%WINDIR%\UPDATES\MSPAINT
+Windows=no
+
+[Welcome]
+Paint von Windows 95 (4.00.950, deutsch), mit einem Symbol in der Gruppe Zubehör. Braucht Win32s und die Visual-C++-Laufzeit.
+
+[ProgMan]
+Item=|Zubehör|Paint|%WINDIR%\WIN95APP\MSPAINT.EXE

@@ -1,0 +1,4 @@
+; Ziel                            Quelle: CD 1 der deutschen Windows-ME-CD, WIN9X\BASE2.CAB
+%WINDIR%\SYSTEM\CTL3D.DLL         wmede:*/*CD1.iso!win9x/BASE2.CAB!ctl3d.dll
+%WINDIR%\SYSTEM\CTL3DV2.DLL       wmede:*/*CD1.iso!win9x/BASE2.CAB!ctl3dv2.dll
+%WINDIR%\SYSTEM\CTL3D32.DLL       wmede:*/*CD1.iso!win9x/BASE2.CAB!ctl3d32.dll

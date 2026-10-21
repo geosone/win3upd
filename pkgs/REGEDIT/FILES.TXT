@@ -1,0 +1,4 @@
+; Ziel                            Quelle: IECORE.CAB des deutschen Internet Explorer 5 (gaby.de)
+%WINDIR%\SYSTEM\REGEDT16.EXE      ie5core:regedt16.exe
+%WINDIR%\SYSTEM\WIN16X.DLL        ie5core:win16x.dll
+%WINDIR%\SYSTEM\COMCTL16.DLL      ie5core:comctl16.dll

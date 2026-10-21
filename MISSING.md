@@ -18,7 +18,7 @@ Typische Adressen der deutschen Microsoft-Downloads (zum Suchen in der
 
 | Paket | Fehlt | Stand / Hinweis |
 |---|---|---|
-| NETWORK | **WFWFILES deutsch** (Update-Dateien aus `\CLIENTS\WFW\UPDATE` der deutschen Windows-NT-Server-3.51-CD): `NET.EXE`, `NET.MSG`, `NDIS.386`, `VREDIR.386`, `VSERVER.386`, `VNETSUP.386`, `NWNBLINK.386`, `NETAPI.DLL` | Jetzt englisch (`wfwfiles.exe` von conradshome.com); NET.EXE/NET.MSG deshalb nur auf Wunsch. |
+| NETWORK | **WFWFILES deutsch** (Update-Dateien aus `\CLIENTS\WFW\UPDATE` der deutschen Windows-NT-Server-3.51-CD): `NET.EXE`, `NET.MSG`, `NDIS.386`, `VREDIR.386`, `VSERVER.386`, `VNETSUP.386`, `NWNBLINK.386`, `NETAPI.DLL` | Jetzt englisch (`wfwfiles.exe` von conradshome.com). NET.MSG bekommt beim Bauen die deutschen Texte der WfW-Disketten (nur eine neue Meldung und wenige Texte in NET.EXE bleiben englisch). |
 | NETWORK | Deutsche Fassungen von WG0970 (VNETBIOS.386), WG0971 (NDIS2SUP.386), WG0973 (RMM.D32), WG1001 (SERIAL.386), WG1027 (NWLINK.386) | Wahrscheinlich sprachneutral; zu prüfen, ob es DE-Fassungen gab. |
 | VBRUN | Deutsche Visual-Basic-Laufzeit (`VBRUN100.DLL`, `VBRUN200.DLL`, `VBRUN300.DLL`, `VB40016.DLL` deutsch) | Jetzt englisch. Kein deutscher Download gefunden (Suche Okt. 2026: nur DLL-Seiten und [archive.org/details/VBRUN300_EXE](https://archive.org/details/VBRUN300_EXE), englisch 3.0.5.38). Deutsche VB-3.0/4.0-Laufzeit nur von der deutschen VB-CD. |
 
@@ -26,30 +26,32 @@ Typische Adressen der deutschen Microsoft-Downloads (zum Suchen in der
 
 | Paket | Inhalt | Englische Quelle der Vorlage | Deutsch gesucht |
 |---|---|---|---|
-| VFW | Video für Windows 1.1e Laufzeit | `WV1160.EXE` (jmcgowan.com, englisch) | Deutsche Video-für-Windows-Laufzeit 1.1 (z. B. `WV1160DE`, deutsche TechNet-CD) |
-| OLE2 | OLE 2.03 | aus `PW1118.EXE` (Win32s 1.30c) | Deutsches OLE 2.0x |
-| W32S_130 | Win32s 1.30c | `PW1118.EXE` (pcworld.com) | Win32s 1.30c deutsch (`PW1118` DE, `W32S130D…`) |
 | W32S_125 | Win32s 1.25a | Disketten von WinWorld | Win32s 1.25a deutsch |
-| IE5 | Internet Explorer 5 16 Bit | `msdl.microsoft.com/msdownload/ie5/rtw/win16/en/cab/*.cab` (BROWSER, IECORE, MSHTML16, PRESU) | Gleiche CABs mit `/de/`: im Archiv bisher nicht gefunden. Alternativ IE5 16 Bit von einer deutschen Zeitschriften- oder Windows-CD |
-| REGEDIT | 16-Bit-Registrierungseditor aus IE5 (`REGEDT16.EXE`) | `iecore.cab` (en) | Kommt mit IE5 deutsch |
+| IE5 | Internet Explorer 5 16 Bit | `msdl.microsoft.com/msdownload/ie5/rtw/win16/en/cab/*.cab` (BROWSER, IECORE, MSHTML16, PRESU) | Deutsche CABs bei gaby.de (`ftp/pub/win3x/ie5/`, nur dort; im Archiv liegen die englischen): BROWSER, IECORE, MSHTML16, OLE, IECIF, STACKND gefunden; **PRESU.CAB fehlt** |
 | IE3 | Internet Explorer 3.03 SP1 16 Bit | `dlful30f.exe` (Spiegel) | IE 3.03 16 Bit deutsch |
 | 310TO311 | Windows-3.11-Update für 3.10 (WW0981) | `ww0981.exe` (conradshome.com) | Deutsche Fassung (`WW0981` DE) |
 | CALC | Rechner-Update (WW1138) | `…/win95upg/update/6/w95/en-us/ww1138.exe` | Deutsche Fassung |
 | FAX | At Work PC Fax: WG0992, WG1126 | conradshome.com | Deutsche Fassungen |
 | EXTRAS3X | Fehlende Zubehörprogramme für WfW (WFWADD) | `wfwadd.exe` (conradshome.com) | Deutsch; sonst aus deutschem Windows 3.1 |
 | FIDVFIX | Pentium-FDIV-Fix (WW1140, FP.386) | `ww1140.exe`, schon in `downloads.txt` | Zurückgestellt: Das Entfernen von `*vmcpd` lässt sich nicht sauber rückgängig machen |
-| MSVCRT | Visual-C++-2.x/4.1-Laufzeit (32 Bit, Win32s) | VC++-CDs, `Vc41b.exe` | Sprachneutral, aber nur von CDs: frei ladbare Quelle gesucht |
 | MMP | MCI-Treiber für Multimedia Movie Player | Windows 3.0 MME (Creative OEM) | Freie Quelle gesucht |
-| FREECELL | FreeCell (Entertainment Pack 2) | Entertainment-Pack-CD | Deutsch, frei ladbar? |
-| CTL3DME | CTL3D aus Windows ME | `WIN_10.CAB` der ME-CD | Nur von CD; eher weglassen |
 
-**Aus Windows 95/NT** (CALC32, MSPAINT, WORDPAD, FONTVIEW, PINBALL): Die
-Vorlage nimmt sie von den CDs. Ohne frei ladbaren deutschen Download kommen
-sie nicht auf die CD.
 
 ## 3. Erledigt oder nicht nötig
 
 - TCP/IP-32 3.11b (TCP32B) und damit WINSOCK.DLL gab es nur englisch.
+- OLE2 (16 Bit) gibt es nur im englischen Win32s-Paket (PW1118); WIN32S
+  nimmt dazu die deutschen Win32s-Dateien von gaby.de (`deu.zip`).
+- CALC32, WORDPAD, MSPAINT, FONTVIEW und FREECELL kommen von der
+  deutschen Windows-95-CD (OSR 2.5, WinWorld), CTL3DME von der deutschen
+  Windows-ME-CD (WinWorld).
+- VFW: deutsche Video-für-Windows-1.1-Laufzeit von gaby.de (`vfw11.zip`);
+  ihre OLE2.REG liefert die deutschen Texte für das Paket OLE2.
+- MSVCRT: die Win32s-Fassungen aus Visual C++ 2.2 (WinWorld, \WIN32S\REDIST);
+  die MSVCRT20.DLL 2.11 aus Windows 95/NT läuft unter Win32s nicht.
+- PINBALL: deutsche Windows-NT-4.0-CD (WinWorld).
+- REGEDIT: REGEDT16 aus der deutschen IECORE.CAB von gaby.de (die Kopien im
+  Internet Archive sind englisch).
 - EURO: deutsches WIN3EURO eingebaut (Paket EURO).
 - NETWORK: die 22 Dateien der WfW-Disketten kommen aus der deutschen WfW 3.11
   (OEM) von WinWorld (Disketten 8 und 9).

@@ -1,0 +1,30 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Video für Windows 1.1 (Laufzeit)
+Id=W3U-VFW
+Version=1.1
+DefaultDir=%WINDIR%\UPDATES\VFW
+Windows=no
+Done=Video für Windows ist installiert. Es wird beim nächsten Start von Windows geladen.
+
+[Welcome]
+Die deutsche Laufzeit von Video für Windows 1.1: AVI-Wiedergabe, die Medien-Wiedergabe 3.15, der Audio-Komprimierungs-Manager mit den ADPCM-Codecs und die Video-Codecs (Cinepak, Indeo, RLE, Video 1). DVA.386 und OLE 2 sind eigene Pakete.
+
+[System.ini]
+Set=|Drivers|VIDC.CVID=iccvid.drv
+Set=|Drivers|VIDC.MSVC=msvidc.drv
+Set=|Drivers|VIDC.IV32=ir32.dll
+Set=|Drivers|VIDC.IV31=ir32.dll
+Set=|Drivers|VIDC.MRLE=msrle.drv
+Set=|Drivers|VIDC.RT21=ir21_r.dll
+Set=|Drivers|VIDC.YVU9=ir21_r.dll
+Set=|Drivers|WaveMapper=msacm.drv
+Set=|Drivers|MSACM.msadpcm=msadpcm.acm
+Set=|Drivers|MSACM.imaadpcm=imaadpcm.acm
+Set=|mci|AVIVideo=mciavi.drv
+
+[Win.ini]
+Set=|mci extensions|avi=AVIVideo
+
+[Registry]
+Import=|MPLAYER.REG

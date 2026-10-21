@@ -1,0 +1,15 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Win32s 1.30c (32-Bit-Erweiterung)
+Id=W3U-WIN32S
+Version=1.30.172
+DefaultDir=%WINDIR%\UPDATES\WIN32S
+Windows=no
+Done=Win32s ist installiert. Es wird beim nächsten Start von Windows geladen.
+
+[Welcome]
+Win32s 1.30c erlaubt Windows 3.1 und Windows für Workgroups, 32-Bit-Programme für Windows NT und Windows 95 auszuführen. Englisches Paket von Microsoft (PW1118) mit den deutschen Win32s-Dateien (Dialoge, Hilfe, WINHLP32). Braucht OLE 2.03 und VSHARE.386.
+
+[System.ini]
+Add=|386Enh|device=%WINDIR%\SYSTEM\WIN32S\W32S.386
+Set=|boot|drivers=mmsystem.dll winmm16.dll

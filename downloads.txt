@@ -1,4 +1,5 @@
-# Downloads of mkwin3upd.ps1: id, SHA-256, URL (the file name is the last part)
+# Downloads of mkwin3upd.ps1: id, SHA-256, URL, file name in the cache (if
+# not given: the last part of the URL)
 # Microsoft downloads through the Internet Archive (web.archive.org, "id_" =
 # the original file), German files from www.gaby.de (win31.de).
 
@@ -32,4 +33,25 @@ euro      c50e4ae37441c60324d86c155a56b43a5d6b85b7f8985f77daa31aad53e102c1  http
 
 # German Windows for Workgroups 3.11 (OEM, 9 disks, WinWorld): only the
 # network setup files of disks 8 and 9 that the updates do not replace
-wfwde     ef52079d28770eb899ab7ca1b9f2fce81457b4ca630b0fe942b987606445305f  https://winworldpc.com/download/482c0967-4dc3-9d11-c3a6-e280947e5254/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2
+wfwde     ef52079d28770eb899ab7ca1b9f2fce81457b4ca630b0fe942b987606445305f  https://winworldpc.com/download/482c0967-4dc3-9d11-c3a6-e280947e5254/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2  wfwde.7z
+
+# Win32s 1.30c with OLE 2.03 (English) and the German Win32s files (gaby.de)
+pw1118    5e7162ba950856104b4c6cb39d2fa5c55e73f86b1d65c31341913dba8b6ba455  https://web.archive.org/web/20060415063522id_/http://downloads.pcworld.com/pub/new/business/management/pw1118.exe
+w32sdeu   fc777769a10458b0054dc14157acb67cac588c3f11fc4ad080567e833ebd5d7a  https://web.archive.org/web/20051025170639id_/http://www.gaby.de/ftp/pub/win3x/win32s/deu.zip
+
+# German Windows 95 OSR 2.5, Windows ME and Windows NT 4.0 (CD images,
+# WinWorld): programs and libraries that also run under Win32s, CTL3D 2.31
+w95de     55a7d655ea9e15290f371a4a46d6364c7c35cfe3f7675f3cd7498e9c9e0050fc  https://winworldpc.com/download/4011c2bf-5c18-c39a-11c3-a4e284a2c3a5/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2  w95de.7z
+wmede     e2f3aa155f35be791f47926e677eee14e51ebc6d063ac817c4a60521b0c25862  https://winworldpc.com/download/24e280a1-e280-9a6b-7c48-11c3a5c28f13/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2  wmede.7z
+
+# German Video for Windows 1.1 runtime (gaby.de)
+vfwde     f7d5643914a6c12676a40aeda922f3adc972f556cff342991e449dd3673a2725  https://web.archive.org/web/20060618100416id_/http://www.gaby.de:80/ftp/pub/win3x/vfw11.zip
+wnt4de    11c5bb1f26782854bbef897d5ce6ffefc8aeff48caf1d8b6cc7dbd984aef1bb2  https://winworldpc.com/download/879e10c1-b7ac-11e7-b8e6-fa163e9022f0/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2  wnt4de.7z
+
+# German Internet Explorer 5 for Windows 3.1 (gaby.de; the copies in the
+# Internet Archive are the English ones)
+ie5core   95061a51c0c673bf2ac06dc3d54ac38112811b0118b664757d27b8f115b3e47c  http://www.gaby.de/ftp/pub/win3x/ie5/iecore.cab
+
+# Microsoft Visual C++ 2.2 Upgrade (CD image, WinWorld): the Win32s versions
+# of the Visual C++ 2.x runtime and MFC 3.0 (\WIN32S\REDIST)
+vc22      582712a2f8a8b311f868cf9ef7d3221eae0c61f4a03e030d27f23e661b0c829e  https://winworldpc.com/download/39c2aec3-b07a-e280-9cc3-8311c3a6efbf/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2  vc22.7z

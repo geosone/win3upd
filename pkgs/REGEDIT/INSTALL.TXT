@@ -1,0 +1,12 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Registrierungs-Editor aus Internet Explorer 5
+Id=W3U-REGEDIT
+DefaultDir=%WINDIR%\UPDATES\REGEDIT
+Windows=no
+
+[Welcome]
+Der 16-Bit-Registrierungs-Editor (REGEDT16.EXE) aus dem deutschen Internet Explorer 5 für Windows 3.1. Er zeigt die Registrierung als Baum wie unter Windows 95 und kann sie in REGEDIT4-Dateien exportieren. Symbol in der Gruppe Hauptgruppe. Braucht OLE 2.
+
+[ProgMan]
+Item=|Hauptgruppe|Registrierungs-Editor|%WINDIR%\SYSTEM\REGEDT16.EXE

@@ -1,0 +1,5 @@
+%WINDIR%\WIN95APP\WORDPAD.EXE   w95de:*.iso!Win95/win95_02.cab!wordpad.exe
+%WINDIR%\WIN95APP\WORDPAD.HLP   w95de:*.iso!Win95/win95_02.cab!wordpad.hlp
+%WINDIR%\WIN95APP\WORDPAD.CNT   w95de:*.iso!Win95/win95_02.cab!wordpad.cnt
+; WordPad looks for RICHED32.DLL in SYSTEM: the German one of Win32s
+%WINDIR%\SYSTEM\RICHED32.DLL      w32sdeu:deu/RICHED32.DLL

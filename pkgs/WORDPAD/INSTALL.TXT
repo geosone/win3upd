@@ -1,0 +1,15 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=WordPad aus Windows 95 (32 Bit)
+Id=W3U-WORDPAD
+DefaultDir=%WINDIR%\UPDATES\WORDPAD
+Windows=no
+
+[Welcome]
+WordPad von Windows 95 (4.00.950, deutsch) zum Lesen und Schreiben von RTF-Dateien, mit einem Symbol in der Gruppe Zubehör. Braucht Win32s und die Visual-C++-Laufzeit. RTF-Dateien werden mit WordPad geöffnet. Unter Win32s funktioniert das Lineal nicht, wenn ein Drucker eingerichtet ist.
+
+[Win.ini]
+Set=|Extensions|rtf=%WINDIR%\WIN95APP\WORDPAD.EXE ^.rtf
+
+[ProgMan]
+Item=|Zubehör|WordPad|%WINDIR%\WIN95APP\WORDPAD.EXE

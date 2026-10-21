@@ -1,0 +1,1 @@
+%WINDIR%\WIN95APP\CALC32.EXE      w95de:*.iso!Win95/win95_02.cab!calc.exe
