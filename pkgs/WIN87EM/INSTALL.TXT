@@ -1,0 +1,9 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=WIN87EM.DLL für 80387-Koprozessoren
+Id=W3U-WIN87EM
+DefaultDir=%WINDIR%\UPDATES\WIN87EM
+Windows=no
+
+[Welcome]
+WIN87EM.DLL rechnet für Windows-Programme mit Gleitkommazahlen. Diese Fassung behebt falsche Ergebnisse mit manchen Intel-80387-Koprozessoren (Microsoft WW0548).

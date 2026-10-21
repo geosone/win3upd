@@ -1,0 +1,19 @@
+# Downloads of mkwin3upd.ps1: id, SHA-256, URL (the file name is the last part)
+# Microsoft downloads through the Internet Archive (web.archive.org, "id_" =
+# the original file), German files from www.gaby.de (win31.de).
+
+# Windows 3.1x updates (sprachneutral or English only)
+ctl3d     af52912fd6eeb9f848fea8b60344ba4e76d4df8451a61569e3f31927dae34fd9  https://web.archive.org/web/20040116232421id_/http://download.microsoft.com:80/download/platformsdk/file/3.1/W31/EN-US/Ctl3d.exe
+ww1000    5492d602b9473221a4b5fb761791141857663f5ea08f64a85a3032da0bcf03c5  https://web.archive.org/web/20060320000416id_/http://download.microsoft.com:80/download/win31/Update/3.11.0.402/WIN/EN-US/Ww1000.exe
+ww0548    9d11c42d19d3a71a99696bd365749fde249447ab62848017688e0bdd4f0e1858  https://web.archive.org/web/20141203183606id_/http://download.microsoft.com/download/win31/Patch/1.0/WIN/EN-US/ww0548.exe
+ww1140    d8b40aa5f3e103b02fa6b5cf636312dbc5010ea6133946b4bdb2162e16765dc6  https://web.archive.org/web/20140207041240id_/http://www.conradshome.com/win31/archive/softlib/ww1140.exe
+wing10    f67a73df1ede7bf23c079b1328203ccbf1f5cb0c455b9df8ca3a73dec0828b65  https://web.archive.org/web/20040604045533id_/http://download.microsoft.com/download/platformsdk/wing/1/WIN98/EN-US/Wing10.exe
+vbrun100  ab8066a35f273edea1e09abb163a02848e7c78a476116babba6b91e10568d985  https://web.archive.org/web/20051224095246id_/http://download.microsoft.com/download/vb30/sampleAA/1/W9XNT4/EN-US/Vbrun100.exe
+vbrun200  4b0811d8fdcac1fd9411786c9119dc8d98d0540948211bdbc1ac682fbe5c0228  https://web.archive.org/web/20051224095432id_/http://download.microsoft.com/download/vb30/Sample39/1/W9XNT4/EN-US/vbrun200.exe
+vb3run    3ca3ad6332f83b5c2b86e4758afa400150f07ae66ce8b850d8f9d6bcd47ad4cd  https://web.archive.org/web/20051022172511id_/http://download.microsoft.com/download/vb30/utility/1/w9xnt4/en-us/vb3run.exe
+vb4run    40931308b5a137f9ce3e9da9b43f4ca6688e18b523687cfea8be6cdffa3153fb  https://web.archive.org/web/20051022172518id_/http://download.microsoft.com/download/vb40ent/Sample27/1/W9XNT4/EN-US/Vb4Run.exe
+wv1160    45a98dd5dfa01af6d6a5a40d9aac5aebc4c0f48f7a1971a9986e7dbeaaa868f7  https://web.archive.org/web/20011006213218id_/http://www.jmcgowan.com/WV1160.EXE
+
+# German
+wfwy2kde  5a0e38a4542bc564ce3d00da27478f1a4e3eebb578915539ba464d2b8e7b7433  https://web.archive.org/web/20030121062356id_/http://download.microsoft.com/download/wfw311/Update/3.11.0.304/WIN/DE/WFWY2KDE.EXE
+w31y2kde  57b1baeeea61e2e14552899145fd18cb3ac6222606efabc3ed3e4e42fd794a62  https://web.archive.org/web/20030216151918id_/http://download.microsoft.com/download/win31/Update/3.10.0.103/W31/DE/W31Y2KDE.EXE

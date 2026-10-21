@@ -1,0 +1,14 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=VSHARE.386 3.11.0.402
+Id=W3U-VSHARE
+Version=3.11.0.402
+DefaultDir=%WINDIR%\UPDATES\VSHARE
+Windows=no
+Done=VSHARE.386 ist installiert. Es wird beim nächsten Start von Windows geladen.
+
+[Welcome]
+VSHARE.386 ersetzt SHARE.EXE im erweiterten Modus von Windows: Es regelt den gemeinsamen Zugriff auf Dateien. Die Fassung 3.11.0.402 behebt Fehler der ersten Fassung.
+
+[System.ini]
+Add=|386Enh|device=vshare.386

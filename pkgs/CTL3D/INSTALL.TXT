@@ -1,0 +1,10 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=3D-Steuerelemente (CTL3D)
+Id=W3U-CTL3D
+DefaultDir=%WINDIR%\UPDATES\CTL3D
+Windows=no
+Done=Die 3D-Steuerelemente sind installiert. Sie werden beim nächsten Start von Windows verwendet.
+
+[Welcome]
+CTL3D.DLL, CTL3DV2.DLL und CTL3D32.DLL (für Win32s) zeichnen die Dialogfelder vieler Programme dreidimensional. Dieses Paket installiert die letzten Fassungen von Microsoft.

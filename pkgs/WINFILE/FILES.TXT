@@ -1,0 +1,3 @@
+; Windows für Workgroups 3.11 oder Windows 3.1
+1|%WINDIR%\WINFILE.EXE            wfwy2kde:WINFILE.Y2K
+2|%WINDIR%\WINFILE.EXE            w31y2kde:WINFILE.Y2K

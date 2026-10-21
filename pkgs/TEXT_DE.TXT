@@ -1,0 +1,67 @@
+; Deutsche Texte des GeosOne Dual Installers (mkwin3upd.ps1 hängt sie an
+; jede INSTALL.INI an; Schlüssel siehe gdi/src/install.c und wininstall.c)
+[Text]
+WelcomeTitle=Willkommen
+WelcomeText=Dieses Programm installiert
+Continue=Weiter
+Exit=Beenden
+OK=OK
+LicenseTitle=Lizenzvertrag
+Accept=Annehmen
+Decline=Ablehnen
+DirTitle=Zielverzeichnis
+DirText=Verzeichnis für die Deinstallationsdaten (Sicherungen, Protokoll):
+DirError=Bitte einen vollständigen Pfad angeben (z. B. C:\WINDOWS\UPDATES), der angelegt werden kann.
+WinTitle=Windows
+WinText=Windows-Verzeichnis (für SYSTEM.INI, WIN.INI und den Programm-Manager):
+OptionsTitle=Optionen
+OptionsText=Wählen Sie die Teile aus (Leertaste schaltet ein/aus):
+WinAuto=Dreistufige Felder: automatische Erkennung.
+SumTitle=Bereit zur Installation
+SumFiles=Dateien nach:
+SumPatch=Binärpatch
+SumProgMan=Programm-Manager
+SumBackup=\nErsetzte Dateien werden als *.G01, *.G02, ... aufbewahrt.
+SumUpdateTitle=Bereit zur Aktualisierung
+SumUpdateFiles=Dateien aktualisieren in:
+SumUpdateKeep=Vorhandene Einträge und die Einstellungsdateien des Programms bleiben unverändert.
+Install=Installieren
+Cancel=Abbrechen
+Remove=Entfernen
+Update=Aktualisieren
+UpdateTitle=Aktualisierung
+UpdateText=%s ist bereits in %s installiert. Das Setup ersetzt die Dateien; die Systemeinstellungen und die Einstellungsdateien des Programms bleiben erhalten.
+UpdateOld=Installierte Version:
+UpdateNew=Neue Version:
+UninstTitle=Entfernen
+UninstText=Die Installation entfernen und die vorherigen Dateien und Einstellungen wiederherstellen?
+UninstDone=Die Installation wurde entfernt.
+CopyTitle=Dateien werden kopiert
+CopyError=Kopieren nicht möglich:
+DiskTitle=Nächster Datenträger
+InsertDisk=Bitte legen Sie Datenträger %d in Laufwerk %c: ein.
+DiskError=Der Datenträger ist beschädigt oder nicht lesbar.
+DoneTitle=Installation abgeschlossen
+DoneText=Die Installation ist abgeschlossen. Starten Sie Windows neu, damit die Änderungen wirksam werden.
+ShowReadme=Liesmich
+ReadmeTitle=Liesmich
+ErrorTitle=Fehler
+AbortTitle=Setup
+Aborted=Das Setup wurde abgebrochen.
+MissingFile=Datei nicht gefunden:
+RunError=Programm kann nicht gestartet werden:
+WriteError=Schreiben nicht möglich:
+NeedDos=Bitte beenden Sie Windows und starten Sie dieses Setup unter MS-DOS.
+ProgManError=Die Programmgruppe kann nicht geändert werden:
+KeysMsg=Eingabe=Auswählen  Esc=Abbrechen
+KeysInput=Eingabe=Weiter  Esc=Abbrechen
+KeysOpt=Leertaste=Ein/Aus  Eingabe=Weiter  Esc=Abbrechen
+KeysView=Bild auf/ab=Blättern  Eingabe=Auswählen  Esc=Abbrechen
+InstTitle=Pakete
+InstText=Wählen Sie die Pakete aus (Leertaste schaltet ein/aus):
+InstDone=%d Pakete wurden installiert.
+InstInstalled=installiert
+InstMissing=fehlt
+InstCancelled=abgebrochen
+InstFailed=fehlgeschlagen
+InstNeedDos=nur unter MS-DOS

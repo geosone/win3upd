@@ -1,0 +1,10 @@
+; Reihenfolge der Pakete im gemeinsamen Installer (INSTALL.EXE im
+; Hauptverzeichnis der CD): Voraussetzungen zuerst.  Nicht aufgeführte
+; Pakete folgen alphabetisch.
+VSHARE
+WIN87EM
+CTL3D
+DVA
+WING
+VBRUN
+WINFILE

@@ -1,0 +1,27 @@
+Windows 3.1x Update (deutsch)
+=============================
+
+Updates für Windows 3.1 und Windows für Workgroups 3.11, zusammengestellt
+aus den Original-Downloads von Microsoft (Internet Archive) und deutschen
+Fassungen von www.win31.de.
+
+INSTALL.EXE im Hauptverzeichnis installiert die ausgewählten Pakete
+nacheinander: Erst fragt es die Lizenzen und Optionen aller Pakete ab,
+dann installiert es ohne weitere Fragen. Jedes Verzeichnis enthält
+außerdem das Paket mit eigener INSTALL.EXE (GeosOne Dual Installer).
+INSTALL.EXE läuft unter MS-DOS und unter Windows; Pakete, die
+Systemdateien ersetzen, verlangen, dass Windows beendet ist.
+
+  - Ersetzte Dateien werden als *.G01 aufbewahrt.
+  - Entfernen: INSTALL /U im Verzeichnis des Pakets unter
+    C:\WINDOWS\UPDATES (stellt die vorherigen Dateien und Einstellungen
+    wieder her).
+  - Erneutes Installieren einer neueren Fassung aktualisiert das Paket;
+    Einstellungen bleiben erhalten.
+
+Pakete
+------
+
+@PAKETE@
+
+Mit "englisch" gekennzeichnete Pakete gibt es nur in englischer Sprache.

@@ -1,0 +1,4 @@
+; Ziel                            Quelle (downloads.txt-Kennung:Pfad)
+%WINDIR%\SYSTEM\CTL3D.DLL         ctl3d:OBJ16/DLL/CTL3D.DLL
+%WINDIR%\SYSTEM\CTL3DV2.DLL       ctl3d:OBJ16/V2/CTL3DV2.DLL
+%WINDIR%\SYSTEM\CTL3D32.DLL       ctl3d:WIN32S/V2/CTL3D32.DLL

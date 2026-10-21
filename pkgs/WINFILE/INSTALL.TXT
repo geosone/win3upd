@@ -1,0 +1,16 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Datei-Manager mit Jahr-2000-Update
+Id=W3U-WINFILE
+DefaultDir=%WINDIR%\UPDATES\WINFILE
+Windows=no
+
+[Welcome]
+Der Datei-Manager von Windows 3.1 und Windows für Workgroups 3.11 zeigt Jahreszahlen ab 2000 falsch an und sortiert sie falsch. Dieses Paket installiert die korrigierte deutsche Fassung von Microsoft. Die passende Fassung wird erkannt (Windows für Workgroups an WFWSYS.CFG).
+
+[Find]
+WFW=WFWSYS.CFG
+
+[Options]
+Option=?WFW|Für Windows für Workgroups 3.11
+Option=!?WFW|Für Windows 3.1

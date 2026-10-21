@@ -1,0 +1,8 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Visual-Basic-Laufzeitbibliotheken 1.0 bis 4.0
+Id=W3U-VBRUN
+DefaultDir=%WINDIR%\UPDATES\VBRUN
+
+[Welcome]
+Viele Programme für Windows 3.1x sind mit Visual Basic geschrieben und brauchen dessen Laufzeitbibliothek. Dieses Paket installiert VBRUN100.DLL, VBRUN200.DLL, VBRUN300.DLL und VB40016.DLL (englisch).

@@ -1,0 +1,13 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=DVA.386 (direkter Zugriff auf den Bildschirmspeicher)
+Id=W3U-DVA
+DefaultDir=%WINDIR%\UPDATES\DVA
+Windows=no
+Done=DVA.386 ist installiert. Es wird beim nächsten Start von Windows geladen.
+
+[Welcome]
+DVA.386 erlaubt Video für Windows und WinG, direkt in den Bildschirmspeicher zu schreiben. Diese Fassung stammt aus Video für Windows 1.1e.
+
+[System.ini]
+Add=|386Enh|device=dva.386

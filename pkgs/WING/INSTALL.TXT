@@ -1,0 +1,9 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=WinG 1.0 (Grafik für Spiele)
+Id=W3U-WING
+Version=1.0
+DefaultDir=%WINDIR%\UPDATES\WING
+
+[Welcome]
+WinG ist die Grafikschnittstelle von Microsoft für schnelle Spiele unter Windows 3.1x, die viele Spiele der Jahre 1994 bis 1996 voraussetzen.
