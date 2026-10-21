@@ -74,13 +74,14 @@ function Read-Utf8([string]$path) {
 
 # --- downloads -----------------------------------------------------------------
 
-# downloads.txt: id  sha256  url
+# downloads.txt: id  sha256  url  [file name in the cache, default: the end of the url]
 $downloads = @{}
 foreach ($l in (Get-Content -LiteralPath (Join-Path $PSScriptRoot 'downloads.txt'))) {
     if ($l -match '^\s*(#|$)') { continue }
     $f = $l.Trim() -split '\s+'
-    if ($f.Count -ne 3) { throw "downloads.txt: invalid line: $l" }
-    $downloads[$f[0].ToLowerInvariant()] = @{ Sha = $f[1].ToLowerInvariant(); Url = $f[2]; File = ($f[2] -split '/')[-1] }
+    if ($f.Count -lt 3 -or $f.Count -gt 4) { throw "downloads.txt: invalid line: $l" }
+    $file = $(if ($f.Count -eq 4) { $f[3] } else { ($f[2] -split '/')[-1] })
+    $downloads[$f[0].ToLowerInvariant()] = @{ Sha = $f[1].ToLowerInvariant(); Url = $f[2]; File = $file }
 }
 
 function Get-Download([string]$id) {
@@ -157,7 +158,7 @@ function Find-Below([string]$dir, [string]$path) {
     $cur = $dir
     foreach ($part in ($path -split '[\\/]' | Where-Object { $_ })) {
         # a part with * or ? is a pattern (names with spaces: */DISK08.IMG)
-        $hit = Get-ChildItem -LiteralPath $cur -Force |
+        $hit = Get-ChildItem -LiteralPath $cur -Force | Where-Object Name -ne '.done' |
             Where-Object { if ($part -match '[*?]') { $_.Name -like $part } else { $_.Name -ieq $part } } |
             Select-Object -First 1
         if (-not $hit) { throw "Not found: $path (in $dir)" }
@@ -202,6 +203,8 @@ if (-not $Installer) {
 }
 $pkgRoot = Join-Path $PSScriptRoot 'pkgs'
 $names = @(Get-ChildItem -LiteralPath $pkgRoot -Directory | ForEach-Object { $_.Name } | Sort-Object)
+# pwsh -File passes "A,B" as one string
+$Package = @($Package | ForEach-Object { $_ -split ',' } | Where-Object { $_ })
 if ($Package.Count) {
     foreach ($p in $Package) { if ($names -notcontains $p.ToUpperInvariant()) { throw "No package $p in pkgs\" } }
     $names = @($names | Where-Object { $Package -contains $_ })
@@ -223,10 +226,12 @@ foreach ($name in $names) {
     $used = @{}
     foreach ($l in ((Read-Utf8 (Join-Path $src 'FILES.TXT')) -split "`r?`n")) {
         if ($l -match '^\s*(;|$)') { continue }
-        if ($l -notmatch '^\s*(?:([^|\s]*)\|)?(\S+)\s+(\S+)(?:\s+-"([^"]+)")?\s*$') { throw "$name\FILES.TXT: invalid line: $l" }
-        $cond, $target, $spec, $cut = $Matches[1], $Matches[2], $Matches[3], $Matches[4]
-        $base = ($target -split '\\')[-1].ToUpperInvariant()
-        $key = "$spec -$cut"
+        if ($l -notmatch '^\s*(?:([^|\s]*)\|)?(\S+)\s+(\S+)(?:\s+-"([^"]+)")?(?:\s+msg="([^"]+)")?(?:\s+reg="([^"]+)")?\s*$') { throw "$name\FILES.TXT: invalid line: $l" }
+        $cond, $target, $spec, $cut, $msg, $reg = $Matches[1], $Matches[2], $Matches[3], $Matches[4], $Matches[5], $Matches[6]
+        # target "-" or "-NAME": only on the CD (OLE2.REG for [Registry] Import=)
+        $cdOnly = $target.StartsWith('-')
+        $base = $(if ($target -eq '-') { ($spec -split '[:/\\!#]')[-1] } elseif ($cdOnly) { $target.Substring(1) } else { ($target -split '\\')[-1] }).ToUpperInvariant()
+        $key = "$spec -$cut msg=$msg reg=$reg"
         if ($used.ContainsKey($key)) {
             # the same file for another target: once on the CD
             $cdName = $used[$key]
@@ -241,6 +246,23 @@ foreach ($name in $names) {
             } else {
                 $data = Read-Source $spec
             }
+            if ($msg) {
+                # msg="source": NET.MSG with the texts of that (German) one
+                $data = [GeosOne.Win3Upd.NetMsg]::Merge($data, (Read-Source $msg))
+            }
+            if ($reg) {
+                # reg="source": a REGEDIT file with the values of that (German)
+                # one for the keys both have
+                $enc = [Text.Encoding]::GetEncoding(1252)
+                $de = @{}
+                foreach ($r in ($enc.GetString((Read-Source $reg)) -split "`r?`n")) {
+                    if ($r -match '^(HKEY_\S.*?) = (.*)$') { $de[$Matches[1].ToUpperInvariant()] = $Matches[2] }
+                }
+                $merged = foreach ($r in ($enc.GetString($data) -split "`r?`n")) {
+                    if ($r -match '^(HKEY_\S.*?) = ' -and $de.ContainsKey($Matches[1].ToUpperInvariant())) { "$($Matches[1]) = $($de[$Matches[1].ToUpperInvariant()])" } else { $r }
+                }
+                $data = $enc.GetBytes(($merged -join "`r`n"))
+            }
             if ($cut) {
                 # -"text": a text file without this text (OEMSETUP.INF)
                 $t = [Text.Encoding]::GetEncoding(28591).GetString($data)
@@ -251,7 +273,7 @@ foreach ($name in $names) {
             New-Item -ItemType Directory -Force -Path (Split-Path $target2) | Out-Null
             [IO.File]::WriteAllBytes($target2, $data)
         }
-        $files += $(if ($null -ne $cond) { "$cond|" } else { '' }) + "$cdName=$target"
+        if (-not $cdOnly) { $files += $(if ($null -ne $cond) { "$cond|" } else { '' }) + "$cdName=$target" }
     }
     $text = $ini.TrimEnd() + "`n`n[Files]`n" + ($files -join "`n") + "`n`n" + $textDe
     # the engine reads lines of up to 511 characters

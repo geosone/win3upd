@@ -55,6 +55,48 @@ namespace GeosOne.Win3Upd
 		}
 	}
 
+	// NET.MSG of the LAN Manager / WfW client: the number of messages at 0Bh,
+	// a table of 32-bit offsets at 1Fh, then the texts ("?" = no text)
+	public static class NetMsg
+	{
+		static List<byte[]> Read(byte[] d)
+		{
+			int n = d[0x0B] | d[0x0C] << 8;
+			var r = new List<byte[]>();
+			for (int i = 0; i < n; i++) {
+				int from = BitConverter.ToInt32(d, 0x1F + 4 * i);
+				int to = i + 1 < n ? BitConverter.ToInt32(d, 0x1F + 4 * (i + 1)) : d.Length;
+				if (from < 0x1F + 4 * n || to < from || to > d.Length) throw new InvalidDataException("not a NET.MSG file");
+				var t = new byte[to - from];
+				Array.Copy(d, from, t, 0, t.Length);
+				r.Add(t);
+			}
+			return r;
+		}
+
+		static bool Empty(byte[] t) { return t.Length == 0 || t[0] == (byte)'?'; }
+
+		// the messages of newer with the texts of lang where it has one
+		// (a newer NET.EXE with the messages of the localized version)
+		public static byte[] Merge(byte[] newer, byte[] lang)
+		{
+			var n = Read(newer);
+			var l = Read(lang);
+			var o = new MemoryStream();
+			o.Write(newer, 0, 0x1F);
+			int at = 0x1F + 4 * n.Count;
+			var texts = new List<byte[]>();
+			for (int i = 0; i < n.Count; i++) {
+				var t = i < l.Count && !Empty(l[i]) ? l[i] : n[i];
+				texts.Add(t);
+				o.Write(BitConverter.GetBytes(at), 0, 4);
+				at += t.Length;
+			}
+			foreach (var t in texts) o.Write(t, 0, t.Length);
+			return o.ToArray();
+		}
+	}
+
 	// ISO 9660 level 1: the tree of a folder (names must be 8.3)
 	public static class Iso9660
 	{

@@ -10,13 +10,13 @@ Done=Die Netzwerk-Updates sind installiert. TCP/IP-32 richten Sie in der Netzwer
 Nur für Windows für Workgroups 3.11 (unter Windows 3.1 ändert dieses Paket nichts). Es enthält:
 
 - TCP/IP-32 3.11b (Protokoll für die Netzwerkeinrichtung, englisch)
-- die Updates von Windows NT Server 3.51 (\CLIENTS\WFW\UPDATE): NDIS.386, VREDIR.386, VSERVER.386, VNETSUP.386, NWNBLINK.386, NETAPI.DLL, NET.EXE (englisch, nur auf Wunsch)
+- die Updates von Windows NT Server 3.51 (\CLIENTS\WFW\UPDATE): NDIS.386, VREDIR.386, VSERVER.386, VNETSUP.386, NWNBLINK.386, NETAPI.DLL, NET.EXE (NET.MSG mit den deutschen Meldungen; nur neue Meldungen und wenige Texte in NET.EXE sind englisch)
 - RMM.D32 (WG0973), SERIAL.386 (WG1001), VNETBIOS.386 (WG0970), NDIS2SUP.386 (WG0971), NWLINK.386 (WG1027)
 
 Installierte Netzwerkdateien werden ersetzt; die übrigen liegen mit den Netzwerkdateien der deutschen WfW-Disketten für die Netzwerkeinrichtung in C:\WINDOWS\WINSETUP. NDIS.386 wird mit dem Patch aus patcher9x (Jaroslav Hensl, MIT-Lizenz) für schnelle Prozessoren angepasst: Sonst bricht der Start von Windows mit Netzwerk ab.
 
 [Options]
-Option=off|NET.EXE und NET.MSG durch die englische Fassung ersetzen
+Option=on|NET.EXE durch die neuere Fassung ersetzen (Meldungen deutsch)
 
 [Find]
 WFW=WFWSYS.CFG
