@@ -26,3 +26,6 @@ wg0971    fb8c6e71bdb07cd63ea10257cdd2ec6d9a23c63aa316921c55594a7f0581fbff  http
 wg0973    a76363b8dd2477e6901fa5322d3a4f6a91e3e76453edb6878c04c01dbeae3e52  https://web.archive.org/web/20140207041141id_/http://www.conradshome.com/win31/archive/softlib/wg0973.exe
 wg1001    a0a016b4937322b6b9624ee4cfc86f661f442f6e4ca97ef3479d7760a97ea3c7  https://web.archive.org/web/20140207041144id_/http://www.conradshome.com/win31/archive/softlib/wg1001.exe
 wg1027    2d7e817d9ade474a42695f9f1f65df0013ac7f420a3721752835b0c2dcf0db0a  https://web.archive.org/web/20140207041145id_/http://www.conradshome.com/win31/archive/softlib/wg1027.exe
+
+# Euro (German)
+euro      c50e4ae37441c60324d86c155a56b43a5d6b85b7f8985f77daa31aad53e102c1  https://web.archive.org/web/20021101153836id_/http://msdl.microsoft.com:80/msdownload/euro/31/de/WIN3EURO.EXE

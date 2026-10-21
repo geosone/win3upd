@@ -1,0 +1,14 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Eurounterstützung für Windows 3.1x
+Id=W3U-EURO
+DefaultDir=%WINDIR%\UPDATES\EURO
+Windows=no
+Done=Die Eurounterstützung ist installiert. Das Eurozeichen geben Sie mit AltGr+E oder Alt+0128 ein. Hinweise stehen in C:\WINDOWS\EURO.TXT.
+
+[Welcome]
+Die Eurounterstützung von Microsoft (WIN3EURO, deutsch) ergänzt das Eurozeichen in MS Sans Serif, Arial, Courier New und Times New Roman und legt es auf AltGr+E. Dazu ändert sie die Zeichentabelle in GDI.EXE (Zeichen 128 = Euro) und ersetzt die Schriften und Tastaturlayouts im SYSTEM-Verzeichnis.
+
+[HexPatch]
+; EURO_GDI.EXE of WIN3EURO: code page 1252 table, character 80h = U+20AC
+Patch=%WINDIR%\SYSTEM\GDI.EXE|7E 00 7F 00 80 00 81 00 1A 20 92 01|7E 00 7F 00 AC 20 81 00 1A 20 92 01|1
