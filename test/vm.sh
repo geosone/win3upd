@@ -9,7 +9,8 @@
 # package, default: 5x Enter), UNKEYS, SEED (a directory copied into
 # C:\WINDOWS first, e.g. network files to be updated), WINARGS (a program
 # Windows starts, e.g. a Win32s test), WINTIME (seconds until Windows is
-# ended cleanly by test/exitwin/EXITWIN.EXE, default 40), START, TIMEOUT.
+# ended cleanly by test/exitwin/EXITWIN.EXE, default 40), START, TIMEOUT,
+# ALLTIME (TIMEOUT of the combined installation, default 300).
 # At the end the files, INI files and the registry (test/regdat.py) after
 # the removal are compared with the ones before.
 set -uo pipefail
@@ -58,7 +59,7 @@ fetch 0-before
 WINTIME=${WINTIME:-40}
 WIN="@ECHO OFF|PATH C:\;C:\WINDOWS|C:\WINDOWS\WIN C:\EXITWIN.EXE $WINTIME ${WINARGS:-}"
 if [ -n "$ALL" ]; then
-    run 'C:\CD\INSTALL.EXE' install "${KEYS:-ret ret ret ret ret ret ret}"
+    TIMEOUT=${ALLTIME:-300} run 'C:\CD\INSTALL.EXE' install "${KEYS:-ret ret ret ret ret ret ret}"
 else
     for p in "$@"; do run "C:\\CD\\$p\\INSTALL.EXE" "install-$p" "${KEYS:-ret ret ret ret ret}"; done
 fi
