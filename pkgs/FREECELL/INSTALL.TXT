@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=FreeCell aus Windows 95 (32 Bit)
 Id=W3U-FREECELL
+Requires=W3U-WIN32S
 DefaultDir=%WINDIR%\UPDATES\FREECELL
 Windows=no
 

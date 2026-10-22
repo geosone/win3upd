@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=Visual-C++-2.x-Laufzeit für Win32s
 Id=W3U-MSVCRT
+Requires=W3U-WIN32S
 DefaultDir=%WINDIR%\UPDATES\MSVCRT
 Windows=no
 

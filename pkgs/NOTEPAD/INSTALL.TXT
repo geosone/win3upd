@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=Editor für Dateien bis 64 KB (inoffiziell)
 Id=W3U-NOTEPAD
+Requires=W3U-OLE2
 DefaultDir=%WINDIR%\UPDATES\NOTEPAD
 Windows=no
 Done=Der neue Editor ersetzt NOTEPAD.EXE; nach dem Entfernen gilt wieder der Editor von Windows.

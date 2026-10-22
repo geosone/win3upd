@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=Schriftartenanzeige aus Windows 95 (32 Bit)
 Id=W3U-FONTVIEW
+Requires=W3U-WIN32S,W3U-MSVCRT
 DefaultDir=%WINDIR%\UPDATES\FONTVIEW
 Windows=no
 

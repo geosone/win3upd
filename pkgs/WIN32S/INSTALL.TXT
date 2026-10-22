@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=Win32s 1.30c (32-Bit-Erweiterung)
 Id=W3U-WIN32S
+Requires=W3U-OLE2
 Version=1.30.172
 DefaultDir=%WINDIR%\UPDATES\WIN32S
 Windows=no

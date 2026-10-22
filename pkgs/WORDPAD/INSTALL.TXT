@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=WordPad aus Windows 95 (32 Bit)
 Id=W3U-WORDPAD
+Requires=W3U-WIN32S,W3U-MSVCRT
 DefaultDir=%WINDIR%\UPDATES\WORDPAD
 Windows=no
 

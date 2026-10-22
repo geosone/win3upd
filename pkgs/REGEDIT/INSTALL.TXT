@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=Registrierungs-Editor aus Internet Explorer 5
 Id=W3U-REGEDIT
+Requires=W3U-OLE2
 DefaultDir=%WINDIR%\UPDATES\REGEDIT
 Windows=no
 

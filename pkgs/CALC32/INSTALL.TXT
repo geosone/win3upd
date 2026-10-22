@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=Rechner aus Windows 95 (32 Bit)
 Id=W3U-CALC32
+Requires=W3U-WIN32S
 DefaultDir=%WINDIR%\UPDATES\CALC32
 Windows=no
 

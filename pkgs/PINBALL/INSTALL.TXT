@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=3D-Pinball aus Windows NT 4.0 (32 Bit)
 Id=W3U-PINBALL
+Requires=W3U-WIN32S
 DefaultDir=%WINDIR%\UPDATES\PINBALL
 Windows=no
 

@@ -2,6 +2,7 @@
 Title=Windows 3.1x Update
 Product=All3D 1.30 (Andreas Furrer)
 Id=W3U-ALL3D
+Requires=W3U-CTL3D
 DefaultDir=%WINDIR%\UPDATES\ALL3D
 Windows=no
 Done=All3D startet mit dem nächsten Start von Windows (Gruppe Autostart). Einstellungen: Systemsteuerung, All3D.
