@@ -26,7 +26,6 @@ Typische Adressen der deutschen Microsoft-Downloads (zum Suchen in der
 
 | Paket | Inhalt | Englische Quelle der Vorlage | Deutsch gesucht |
 |---|---|---|---|
-| W32S_125 | Win32s 1.25a | Disketten von WinWorld | Win32s 1.25a deutsch |
 | IE3 | Internet Explorer 3.03 SP1 16 Bit | `dlful30f.exe` (Spiegel) | IE 3.03 16 Bit deutsch |
 | 310TO311 | Windows-3.11-Update für 3.10 (WW0981) | `ww0981.exe` (conradshome.com) | Deutsche Fassung (`WW0981` DE) |
 | CALC | Rechner-Update (WW1138) | `…/win95upg/update/6/w95/en-us/ww1138.exe` | Deutsche Fassung |
@@ -49,6 +48,9 @@ Typische Adressen der deutschen Microsoft-Downloads (zum Suchen in der
 - MSVCRT: die Win32s-Fassungen aus Visual C++ 2.2 (WinWorld, \WIN32S\REDIST);
   die MSVCRT20.DLL 2.11 aus Windows 95/NT läuft unter Win32s nicht.
 - PINBALL: deutsche Windows-NT-4.0-CD (WinWorld).
+- W32S_125 (Win32s 1.25a): nicht nötig. WinWorld hat 1.25/1.25a nur
+  englisch, und die deutschen Win32s-Dateien (`deu.zip`) sind 1.30.172; das
+  Paket WIN32S installiert damit das neuere Win32s 1.30c deutsch.
 - IE5: deutsche Setup-Dateien des IE 5.0 (16 Bit) von gaby.de; der deutsche
   Satz ist ohne PRESU.CAB vollständig (laut gaby.de und FILELIST.DAT).
 - REGEDIT: REGEDT16 aus der deutschen IECORE.CAB von gaby.de (die Kopien im
