@@ -1,0 +1,2 @@
+; the 16-bit USER.EXE of the German Windows ME (mini.cab)
+%WINDIR%\SYSTEM\USER.EXE    wmede:*/*CD1.iso!win9x/mini.cab!USER.EXE

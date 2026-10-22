@@ -28,7 +28,8 @@ ALL=
 if [ "$1" = ALL ]; then
     ALL=1
     mcopy -s -o -i "$P" "$ROOT"/out/CD/* ::/CD/ || exit 1
-    set -- $(cd "$ROOT/out/CD" && ls -d */ | tr -d /)
+    # the packages in the order of the combined setup (removed in reverse)
+    set -- $(tr -d '\r' < "$ROOT/out/CD/INSTALL.INI" | sed -n 's/^Inst[0-9]*=\(off|\)\{0,1\}//p')
 else
     for p in "$@"; do mcopy -s -o -i "$P" "$ROOT/out/CD/$p" ::/CD/ || exit 1; done
 fi

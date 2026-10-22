@@ -1,0 +1,6 @@
+; FTaskman 1.24 (freeware: the files unchanged and together); the German
+; program is FTASKMAN.EXG, renamed to FTASKMAN.EXE as FTASKMAN.TXG says
+%DIR%\FTASKMAN.EXE           ftaskman:FTASKMAN.EXG
+%DIR%\FTASKMAN.TXG           ftaskman:FTASKMAN.TXG
+%DIR%\FTASKMAN.TXT           ftaskman:FTASKMAN.TXT
+%DIR%\FTASK124.ZIP           ftaskman:

@@ -1,0 +1,11 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Editor für Dateien bis 64 KB (inoffiziell)
+Id=W3U-NOTEPAD
+DefaultDir=%WINDIR%\UPDATES\NOTEPAD
+Windows=no
+Done=Der neue Editor ersetzt NOTEPAD.EXE; nach dem Entfernen gilt wieder der Editor von Windows.
+
+[Welcome]
+Der Editor von Windows 3.1 öffnet nur Dateien bis 32 KB. Dieses Paket ersetzt ihn durch einen Editor für Dateien bis knapp 64 KB (größere öffnet WordPad): das Beispielprogramm SuperPad aus Microsoft Visual C++ 1.52, aus dem englischen Windows 3.1x Update Script (Kernel32x86), hier mit deutschen Menüs und Meldungen.
+Es kann mehrere Dateien in Fenstern öffnen, hat Tastenkürzel, eine wählbare Schriftart, Seitenansicht und eine Symbol- und Statusleiste. Kein offizielles Update von Microsoft. Die OLE-Dialoge (MFCOLEUI.DLL) sind englisch. Braucht OLE 2 (Paket OLE2).

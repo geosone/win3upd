@@ -1,0 +1,8 @@
+; At Work PC Fax of Windows for Workgroups 3.11: only where installed
+1,?%WINDIR%\SYSTEM\AWFAXIO.DLL|%WINDIR%\SYSTEM\AWFAXIO.DLL    wg1126:AWFAXIO.DLL
+2,?%WINDIR%\SYSTEM\EFAXPUMP.DLL|%WINDIR%\SYSTEM\EFAXPUMP.DLL  wg0992:EFAXPUMP.DLL
+2,?%WINDIR%\SYSTEM\FAXCOVER.DLL|%WINDIR%\SYSTEM\FAXCOVER.DLL  wg0992:FAXCOVER.DLL
+; FAXOPT.DLL: with the German texts of WfW 3.11 and the two changes of WG0992
+; (button "Abbrechen" instead of "Sicherheit deaktivieren", two new settings:
+; the first character is the value; paper size 2 = A4)
+2,?%WINDIR%\SYSTEM\FAXOPT.DLL|%WINDIR%\SYSTEM\FAXOPT.DLL      wg0992:FAXOPT.DLL  res="wfwde:*/DISK04.IMG!FAXOPT.DL_"  set="5:LOGINDLG#2=Abbrechen;5:LOGINDLGMDL#2=Abbrechen;6:11#8=2 Standard-Papierformat (erstes Zeichen): 0 = Letter, 1 = Legal, 2 = A4, 3 = B4, 4 = A3;6:11#9=0 Wahlwiederholung (erstes Zeichen): 0 = bei besetzt, 1 = bei jedem Wählfehler"

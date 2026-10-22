@@ -1,0 +1,9 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Rechner mit Rundungs-Fix
+Id=W3U-CALC
+DefaultDir=%WINDIR%\UPDATES\CALC
+Windows=no
+
+[Welcome]
+Der Rechner von Windows 3.1 und Windows für Workgroups 3.11 rechnet beim Subtrahieren von Zahlen mit Nachkommastellen falsch (2,01 - 2 ergibt 0,00). Microsoft hat das mit WW1138 behoben, aber nur englisch. Dieser Rechner hat das Programm von WW1138 und die deutschen Menüs, Dialoge und Texte des Rechners von Windows für Workgroups 3.11.

@@ -1,0 +1,2 @@
+; the program of WW1138 (English only) with the German texts of WfW 3.11
+%WINDIR%\CALC.EXE    ww1138:CALC.EXE  res="wfwde:*/DISK06.IMG!CALC.EX_"

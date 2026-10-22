@@ -1,0 +1,9 @@
+; All3D 1.30 (freeware: the files unchanged and together; CTL3D.DLL of the
+; archive is not installed, the package CTL3D has a newer one)
+%DIR%\ALL3D.EXE              all3d:ALL3D.EXE
+%DIR%\ALL3DH.DLL             all3d:ALL3DH.DLL
+%DIR%\ALL3DM.EXE             all3d:ALL3DM.EXE
+%DIR%\ALL3DC.EXE             all3d:ALL3DC.EXE
+%DIR%\ALL3D.TXT              all3d:ALL3D.TXT
+%WINDIR%\SYSTEM\ALL3DC.CPL   all3d:ALL3DC.CPL
+%DIR%\ALL3D130.ZIP           all3d:

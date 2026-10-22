@@ -8,6 +8,7 @@ ctl3d     af52912fd6eeb9f848fea8b60344ba4e76d4df8451a61569e3f31927dae34fd9  http
 ww1000    5492d602b9473221a4b5fb761791141857663f5ea08f64a85a3032da0bcf03c5  https://web.archive.org/web/20060320000416id_/http://download.microsoft.com:80/download/win31/Update/3.11.0.402/WIN/EN-US/Ww1000.exe
 ww0548    9d11c42d19d3a71a99696bd365749fde249447ab62848017688e0bdd4f0e1858  https://web.archive.org/web/20141203183606id_/http://download.microsoft.com/download/win31/Patch/1.0/WIN/EN-US/ww0548.exe
 ww1140    d8b40aa5f3e103b02fa6b5cf636312dbc5010ea6133946b4bdb2162e16765dc6  https://web.archive.org/web/20140207041240id_/http://www.conradshome.com/win31/archive/softlib/ww1140.exe
+ww1138    eb76512c6d095bf68bcd471b4c32092590d7e1014d891cc5df3751731b5eb15f  http://www.gaby.de/ftp/pub/win3x/archive/softlib/ww1138.exe
 wing10    f67a73df1ede7bf23c079b1328203ccbf1f5cb0c455b9df8ca3a73dec0828b65  https://web.archive.org/web/20040604045533id_/http://download.microsoft.com/download/platformsdk/wing/1/WIN98/EN-US/Wing10.exe
 vbrun100  ab8066a35f273edea1e09abb163a02848e7c78a476116babba6b91e10568d985  https://web.archive.org/web/20051224095246id_/http://download.microsoft.com/download/vb30/sampleAA/1/W9XNT4/EN-US/Vbrun100.exe
 vbrun200  4b0811d8fdcac1fd9411786c9119dc8d98d0540948211bdbc1ac682fbe5c0228  https://web.archive.org/web/20051224095432id_/http://download.microsoft.com/download/vb30/Sample39/1/W9XNT4/EN-US/vbrun200.exe
@@ -27,6 +28,14 @@ wg0971    fb8c6e71bdb07cd63ea10257cdd2ec6d9a23c63aa316921c55594a7f0581fbff  http
 wg0973    a76363b8dd2477e6901fa5322d3a4f6a91e3e76453edb6878c04c01dbeae3e52  https://web.archive.org/web/20140207041141id_/http://www.conradshome.com/win31/archive/softlib/wg0973.exe
 wg1001    a0a016b4937322b6b9624ee4cfc86f661f442f6e4ca97ef3479d7760a97ea3c7  https://web.archive.org/web/20140207041144id_/http://www.conradshome.com/win31/archive/softlib/wg1001.exe
 wg1027    2d7e817d9ade474a42695f9f1f65df0013ac7f420a3721752835b0c2dcf0db0a  https://web.archive.org/web/20140207041145id_/http://www.conradshome.com/win31/archive/softlib/wg1027.exe
+# Windows for Workgroups 3.11 fixes from the Microsoft Softlib (mirror at
+# gaby.de; the same files as conradshome.com): network card drivers, At Work fax
+wfwvsrvr  64764c0ef337ea87f549a6c72d10a7ca5a94c11c19c1f0bb3fad97080fed410d  http://www.gaby.de/ftp/pub/win3x/archive/softlib/wfwvsrvr.exe
+wg0988    e3c394184dd818678b1254d8e65ecad64196c9759567d39b4de0bdb41e5cb1d7  http://www.gaby.de/ftp/pub/win3x/archive/softlib/wg0988.exe
+wg0990    95c6c9044c4cab4b85ccc8429798bd74a08327cc776ba1a0d4745e87140a06b8  http://www.gaby.de/ftp/pub/win3x/archive/softlib/wg0990.exe
+wg0991    2041e4bef2600191756e10c24e6d1661607e899e9176001a16ad2dae9aefebb7  http://www.gaby.de/ftp/pub/win3x/archive/softlib/wg0991.exe
+wg0992    da2dc01cf33c81af90eec682f9f7e0e85f24110dcdc81c87c8b6b63761acf271  http://www.gaby.de/ftp/pub/win3x/archive/softlib/wg0992.exe
+wg1126    d38688aa26fc6903de1bf395cab30e9c60f4d14f58ccc874577bd5ff82844dc4  http://www.gaby.de/ftp/pub/win3x/archive/softlib/wg1126.exe
 
 # Euro (German)
 euro      c50e4ae37441c60324d86c155a56b43a5d6b85b7f8985f77daa31aad53e102c1  https://web.archive.org/web/20021101153836id_/http://msdl.microsoft.com:80/msdownload/euro/31/de/WIN3EURO.EXE
@@ -34,6 +43,9 @@ euro      c50e4ae37441c60324d86c155a56b43a5d6b85b7f8985f77daa31aad53e102c1  http
 # German Windows for Workgroups 3.11 (OEM, 9 disks, WinWorld): only the
 # network setup files of disks 8 and 9 that the updates do not replace
 wfwde     ef52079d28770eb899ab7ca1b9f2fce81457b4ca630b0fe942b987606445305f  https://winworldpc.com/download/482c0967-4dc3-9d11-c3a6-e280947e5254/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2  wfwde.7z
+# German Windows 3.11 (WinWorld, the expanded setup files): the eight files of
+# WW0981 (Windows 3.10 -> 3.11) in German
+w311de    08fe7513aeebd33cd0c6799a4fb23870a49f4939c4af84a4684075a36865cfca  https://winworldpc.com/download/3f74102b-18c3-9a11-c3a4-e284a2c3a570/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2  w311de.7z
 
 # Win32s 1.30c with OLE 2.03 (English) and the German Win32s files (gaby.de)
 pw1118    5e7162ba950856104b4c6cb39d2fa5c55e73f86b1d65c31341913dba8b6ba455  https://web.archive.org/web/20060415063522id_/http://downloads.pcworld.com/pub/new/business/management/pw1118.exe
@@ -69,3 +81,12 @@ ie5se128  e6dc55df7836da7b916d831f7c657ffad32b153e27d102a459d85fa1587405e2  http
 # Microsoft Visual C++ 2.2 Upgrade (CD image, WinWorld): the Win32s versions
 # of the Visual C++ 2.x runtime and MFC 3.0 (\WIN32S\REDIST)
 vc22      582712a2f8a8b311f868cf9ef7d3221eae0c61f4a03e030d27f23e661b0c829e  https://winworldpc.com/download/39c2aec3-b07a-e280-9cc3-8311c3a6efbf/from/c39ac2af-c381-c2bf-1b25-11c3a4e284a2  vc22.7z
+
+# The English Windows 3.1x Update Script, Release 4 (Kernel32x86): the
+# Notepad made from the SuperPad example of Visual C++ 1.52
+w3xupd4   ea9539775263e528b86476fe486f24c505c1490dd28a32577b324db3ab32d485  https://archive.org/download/win3x-update-rel2/Win3xUpdateScriptRelease4_2026-03-04_04-24.iso
+
+# Freeware of other authors (unchanged, with the original archive on the CD)
+all3d     e7bebda8f63bcb8ef54564d3f524eab1ff6f2cc18fa3930764a653d7dcdc7a16  https://web.archive.org/web/19990202161302id_/http://oak.oakland.edu/pub/simtelnet/win3/deskenh/all3d130.zip
+ftaskman  3f6d1527b34c9883899755a41f85db3167734a463185f518fe162a5977db5c75  https://web.archive.org/web/20051029145947id_/http://info.elf.stuba.sk/packages/pub/pc/utiltask/ftask124.zip
+kframe    ad58aff51fec5741ac8178df2378669f9a753b892efda7ae70aa568a2408cec1  https://web.archive.org/web/19981202180404id_/http://ring.aist.go.jp:80/pub/public/english/win3/desktop/accessry/kframe.lzh

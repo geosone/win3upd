@@ -1,0 +1,14 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=FTaskman 1.24 (Andreas Furrer)
+Id=W3U-FTASKMAN
+DefaultDir=%WINDIR%\UPDATES\FTASKMAN
+Windows=no
+Done=FTaskman ersetzt ab dem nächsten Start von Windows die Task-Liste (Strg+Esc oder Doppelklick auf den Desktop).
+
+[Welcome]
+FTaskman 1.24 von Andreas Furrer (Freeware, deutsch) ersetzt die Task-Liste von Windows 3.1: Programmsymbole in der Liste, Mehrfachauswahl, unsichtbare Programme anzeigen, Programme starten, minimieren, abrupt beenden oder immer im Vordergrund halten, Fenster anordnen, Windows beenden oder neu starten. Beim Entfernen gilt wieder die Task-Liste von Windows.
+Das Originalarchiv FTASK124.ZIP liegt mit der Beschreibung FTASKMAN.TXG im Paketverzeichnis.
+
+[System.ini]
+Set=|boot|taskman.exe=%DIR%\FTASKMAN.EXE

@@ -1,0 +1,5 @@
+; VGASYS.FON of the German Windows 3.11 with its system font replaced by the
+; 8-point MS Sans Serif of SSERIFE.FON, two empty rows above and one below
+; (16 pixels high like the system font): the FONT95 package of the English
+; Windows 3.1x Update Script, made from Microsoft files
+%WINDIR%\SYSTEM\VGASYS95.FON   w311de:VGASYS.FON  font="w311de:SSERIFE.FON"

@@ -1,0 +1,14 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Systemschrift von Windows 95
+Id=W3U-FONT95
+DefaultDir=%WINDIR%\UPDATES\FONT95
+Windows=no
+Done=Die neue Systemschrift gilt ab dem nächsten Start von Windows.
+
+[Welcome]
+Ersetzt die fette Systemschrift von Windows 3.1 durch die schmalere MS Sans Serif 8 Punkt, wie in den Menüs und Titelleisten von Windows 95. Menüs, Titelleisten und Dialoge werden dadurch kompakter. Die Schrift entsteht aus den Microsoft-Schriften des deutschen Windows 3.11 (VGASYS.FON mit der Schrift aus SSERIFE.FON) und kommt als VGASYS95.FON dazu; die alte Systemschrift bleibt erhalten und gilt nach dem Entfernen wieder.
+Für die Anzeige mit kleinen Schriften (VGA und Super-VGA, 96 dpi).
+
+[System.ini]
+Set=|boot|fonts.fon=vgasys95.fon

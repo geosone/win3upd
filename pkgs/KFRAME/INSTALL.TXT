@@ -1,0 +1,22 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Kframe 1.20E (Kaoru Nakajima)
+Id=W3U-KFRAME
+DefaultDir=%WINDIR%\UPDATES\KFRAME
+Windows=no
+Done=Kframe startet mit dem nächsten Start von Windows (Gruppe Autostart).
+
+[Welcome]
+Kframe 1.20E von Kaoru Nakajima (Freeware) zeigt beim Öffnen, Schließen, Minimieren und Wiederherstellen von Fenstern einen bewegten Rahmen und lässt gewählte Menüpunkte blinken, wie unter Windows 95. Es startet über die Gruppe Autostart; die Einstellungen (englisch) öffnet ein Doppelklick auf Kframe in der Gruppe Zubehör.
+Das Originalarchiv KFRAME.LZH liegt im Paketverzeichnis.
+
+[ProgMan]
+Item=|Autostart|Kframe|%DIR%\KFRAME.EXE
+Item=|Zubehör|Kframe-Hilfe|WINHELP.EXE %DIR%\KFRAME.HLP|%DIR%\KFRAME.EXE|0
+
+; the settings of the English package (Hide=Yes: no icon)
+[Win.ini]
+Set=|kframe|Wait=12
+Set=|kframe|Blink=4
+Set=|kframe|Options=0129
+Set=|kframe|Hide=Yes

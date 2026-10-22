@@ -5,6 +5,6 @@ Uninstall=no
 Done=Die Pakete sind installiert. Starten Sie Windows neu, damit die Änderungen wirksam werden. Entfernen lässt sich jedes Paket einzeln mit INSTALL /U in seinem Verzeichnis unter C:\WINDOWS\UPDATES.
 
 [Welcome]
-Dieses Setup installiert Updates für Windows 3.1 und Windows für Workgroups 3.11. Im nächsten Schritt wählen Sie die Pakete aus; alle sind vorausgewählt.
+Dieses Setup installiert Updates für Windows 3.1 und Windows für Workgroups 3.11. Im nächsten Schritt wählen Sie die Pakete aus. Vorausgewählt sind die Updates; Pakete, die das Aussehen ändern, Programme ersetzen oder nur für bestimmte Fälle gedacht sind (z. B. FONT95, USERME, NOTEPAD, FAT32, 310TO311), wählen Sie selbst.
 
 Pakete, die Systemdateien ersetzen, lassen sich nur unter MS-DOS installieren: Beenden Sie dafür Windows und starten Sie INSTALL.EXE von der CD.

@@ -1,0 +1,11 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=USER.EXE von Windows ME (experimentell)
+Id=W3U-USERME
+DefaultDir=%WINDIR%\UPDATES\USERME
+Windows=no
+Done=Windows startet beim nächsten Mal mit der USER.EXE von Windows ME. Läuft Windows danach nicht richtig, entfernt INSTALL /U im Paketverzeichnis sie wieder (auch von MS-DOS aus).
+
+[Welcome]
+Ersetzt USER.EXE durch die deutsche 16-Bit-USER.EXE von Windows ME (4.90.3000, aus MINI.CAB der deutschen Windows-ME-CD). Dialoge erscheinen damit in der schmalen Schrift wie unter Windows 95 und brauchen weniger Platz; zusammen mit der Systemschrift von Windows 95 (Paket FONT95) und All3D wirkt Windows 3.1 wie Windows 95.
+Experimentell: Diese USER.EXE ist nicht für Windows 3.1 gemacht. Einzelne Programme können sich anders verhalten. Der registrierte Name und die Firma stehen danach nicht mehr in der Info-Anzeige. Die alte USER.EXE wird gesichert und beim Entfernen zurückgelegt.

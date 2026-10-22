@@ -8,7 +8,7 @@ Windows=no
 Done=OLE 2.03 ist installiert. Die Einträge in der Registrierung werden beim nächsten Start von Windows geschrieben.
 
 [Welcome]
-Object Linking and Embedding 2.03 für 16-Bit-Programme, aus dem Win32s-1.30c-Paket von Microsoft (PW1118). Viele Programme und Win32s brauchen es. Die Programmdateien sind englisch, die Texte der Einträge in der Registrierung deutsch (aus der deutschen OLE2.REG von Video für Windows). Die Einträge werden beim Entfernen wiederhergestellt.
+Object Linking and Embedding 2.03 für 16-Bit-Programme, aus dem Win32s-1.30c-Paket von Microsoft (PW1118). Viele Programme und Win32s brauchen es. Die Programmdateien sind englisch, bis auf OLECLI.DLL 1.32 (deutsch, von den Disketten von Windows für Workgroups 3.11; Windows 3.1 hat 1.10), die Texte der Einträge in der Registrierung deutsch (aus der deutschen OLE2.REG von Video für Windows). Die Einträge werden beim Entfernen wiederhergestellt.
 
 [Registry]
 Import=|OLE2.REG

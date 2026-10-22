@@ -1,0 +1,6 @@
+; NOTEPAD.EXE of the English Windows 3.1x Update Script with the German texts
+; of NOTEPAD.DE; MFCOLEUI.DLL 2.01 of Visual C++ 1.52 (English); NOTEPAD.INI
+; with Fixedsys, toolbar and status bar off, only if there is none
+%WINDIR%\NOTEPAD.EXE              w3xupd4:PKGS/NOTEPAD/WIN/NOTEPAD.EXE  tr="local:NOTEPAD.DE"
+%WINDIR%\SYSTEM\MFCOLEUI.DLL      w3xupd4:PKGS/NOTEPAD/SYS/MFCOLEUI.DLL
+!?%WINDIR%\NOTEPAD.INI|%WINDIR%\NOTEPAD.INI   w3xupd4:PKGS/NOTEPAD/WININI/NOTEPAD.INI

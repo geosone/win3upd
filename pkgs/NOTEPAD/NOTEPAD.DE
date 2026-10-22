@@ -1,0 +1,191 @@
+; German texts of NOTEPAD.EXE (SuperPad of Visual C++ 1.52 as Notepad, from
+; the English Windows 3.1x Update Script): English<TAB>German, \n, \t and \b as
+; in the resources.  The words follow the German Notepad of Windows 3.11
+; (menus) and the German WordPad of Windows 95 (the MFC texts).
+; menus
+&File	&Datei
+&New\tCtrl+N	&Neu\tStrg+N
+&Open...\tCtrl+O	Ö&ffnen...\tStrg+O
+Page Se&tup...	Seite ein&richten...
+P&rint Setup...	Drucker&einrichtung...
+Recent File	Zuletzt geöffnete Datei
+E&xit\tAlt+F4	&Beenden\tAlt+F4
+&View	&Ansicht
+&Toolbar	&Symbolleiste
+&Status Bar	S&tatusleiste
+&Help	&Hilfe
+&About Notepad...	Inf&o...
+&Close	S&chließen
+&Save\tCtrl+S	&Speichern\tStrg+S
+Save &As...	Speichern &unter...
+&Print...\tCtrl+P	&Drucken...\tStrg+P
+Print Pre&view	Seitenansic&ht
+&Edit	&Bearbeiten
+&Undo\tCtrl+Z	&Rückgängig\tStrg+Z
+Cu&t\tCtrl+X	&Ausschneiden\tStrg+X
+&Copy\tCtrl+C	&Kopieren\tStrg+C
+&Paste\tCtrl+V	&Einfügen\tStrg+V
+&Delete\tDel	&Löschen\tEntf
+&Find...	&Suchen...
+Find &Next\tF3	&Weitersuchen\tF3
+&Replace...	Erse&tzen...
+Select &All	Alles &markieren
+&Word Wrap	&Zeilenumbruch
+Set Ta&b Stops...	&Tabstopps...
+Set &Font...	Schrift&art...
+Set &Printer Font...	&Druckerschriftart...
+&Mirror Display Font	Wie &Bildschirmschriftart
+&Window	&Fenster
+&Cascade	Ü&berlappend
+&Tile	&Nebeneinander
+&Arrange Icons	&Symbole anordnen
+&Update Now...	&Jetzt aktualisieren...
+&New\bCtrl+N	&Neu\bStrg+N
+&Open...\bCtrl+O	Ö&ffnen...\bStrg+O
+&Update <container>	&<Container> aktualisieren
+Save Copy &As...	&Kopie speichern unter...
+&Print...\bCtrl+P	&Drucken...\bStrg+P
+E&xit && return to <container>\bAlt+F4	&Beenden und zurück zu <Container>\bAlt+F4
+; dialogs
+Set Tab Stops	Tabstopps
+&Tab Stops:	&Tabstopps:
+OK	OK
+Cancel	Abbrechen
+Page Setup	Seite einrichten
+&Header:	&Kopfzeile:
+File Time	Dateizeit
+System Time	Systemzeit
+&Footer:	&Fußzeile:
+About Notepad	Info über Editor
+Notepad Version 1.5	Editor Version 1.5
+Microsoft Foundation Classes Version 2.5	Microsoft Foundation Classes Version 2.5
+Available Memory:	Freier Speicher:
+Math Co-processor:	Koprozessor:
+Disk Space:	Speicherplatz:
+Warning: This computer program is protected by	Warnung: Dieses Computerprogramm ist durch
+copyright law and international treaties.  Unauthorized	Urheberrecht und internationale Verträge geschützt.
+reproduction or distribution of this program, or any	Unerlaubte Vervielfältigung oder Verbreitung des
+portion of it, may result in severe civil and criminal	Programms oder eines Teils davon wird zivil- und
+penalties, and will be prosecuted to the maximum	strafrechtlich verfolgt und kann schwere
+extent possible under law.	Strafen nach sich ziehen.
+New	Neu
+&New 	&Neu 
+Printing	Drucken
+on the	auf
+&Print...	&Drucken...
+&Next Page	&Nächste
+Pre&v Page	&Vorherige
+Zoom &In	Ver&größern
+Zoom &Out	Ver&kleinern
+; status bar
+EXT	ERW
+CAP	GROSS
+NUM	NF
+SCRL	RF
+OVR	ÜB
+REC	MA
+Create a new document	Erstellt ein neues Dokument.
+Open an existing document	Öffnet ein vorhandenes Dokument.
+Close the active document	Schließt das aktuelle Dokument.
+Save the active document	Speichert das aktuelle Dokument.
+Save the active document with a new name	Speichert das aktuelle Dokument unter neuem Namen.
+Change the printer and printing options	Ändert Drucker und Druckeinstellungen.
+Print the active document	Druckt das aktuelle Dokument.
+Display full pages	Zeigt ganze Seiten an.
+Display program information, version number and copyright	Zeigt Programminformationen, Versionsnummer und Copyright an.
+Quit the application; prompts to save documents	Beendet die Anwendung und fordert zum Speichern auf.
+List Help topics	Zeigt die Hilfethemen an.
+Display instructions about how to use help	Zeigt Anweisungen zum Verwenden der Hilfe an.
+Display help for clicked on buttons, menus and windows	Zeigt Hilfe zu angeklickten Schaltflächen, Menüs oder Fenstern an.
+Display help for current task or command	Zeigt Hilfe zum aktuellen Vorgang oder Befehl an.
+Open this document	Öffnet dieses Dokument.
+Arrange icons at the bottom of the window	Ordnet die Symbole am unteren Fensterrand an.
+Arrange windows so they overlap	Ordnet die Fenster überlappend an.
+Arrange windows as non-overlapping tiles	Ordnet die Fenster nebeneinander an.
+Erase the selection	Löscht die Markierung.
+Copy the selection and puts it on the Clipboard	Kopiert die Markierung in die Zwischenablage.
+Cut the selection and puts it on the Clipboard	Schneidet die Markierung aus und legt sie in die Zwischenablage.
+Find the specified text	Sucht den angegebenen Text.
+Insert Clipboard contents	Fügt den Inhalt der Zwischenablage ein.
+Repeat last find command	Wiederholt den letzten Suchvorgang.
+Replace specific text with different text	Ersetzt den angegebenen Text.
+Select the entire document	Markiert das gesamte Dokument.
+Undo the last action	Macht den letzten Vorgang rückgängig.
+Show or hide the toolbar	Blendet die Symbolleiste ein oder aus.
+Show or hide the status bar	Blendet die Statusleiste ein oder aus.
+Set headers, footers, and margins	Legt Kopf- und Fußzeile fest.
+Set font for printing	Legt die Schriftart für den Druck fest.
+Change the window size	Ändert die Fenstergröße.
+Change the window position	Verschiebt das Fenster.
+Reduce the window to an icon	Minimiert das Fenster.
+Enlarge the window to full size	Maximiert das Fenster.
+Switch to the next document window	Wechselt zum nächsten Dokumentfenster.
+Close the active window and prompts to save the documents	Schließt das aktive Fenster und fordert zum Speichern auf.
+Restore the window to normal size	Stellt wieder die normale Fenstergröße her.
+Activate Task List	Aktiviert die Task-Liste.
+Activate this window	Aktiviert dieses Fenster.
+Notepad	Editor
+Ready	Bereit
+Select an object on which to get Help	Wählen Sie ein Objekt, zu dem Sie Hilfe möchten.
+\nUntitled\nText Document\nText Files (*.txt)\n.txt\nSuperPad.Document.2\nMFC 2.5 Text Document	\nUnbenannt\nTextdokument\nTextdateien (*.txt)\n.txt\nSuperPad.Document.2\nMFC 2.5-Textdokument
+Select display font for this window	Wählt die Bildschirmschriftart für dieses Fenster.
+Set tab stops for this window	Legt die Tabstopps für dieses Fenster fest.
+Toggle on/off word-wrap mode	Schaltet den Zeilenumbruch ein oder aus.
+; messages
+Cannot get printer device context.	Der Druckerkontext ist nicht verfügbar.
+Cannot get printer device defaults.	Die Standardeinstellungen des Druckers sind nicht verfügbar.
+OLE 2.0 initialization failed.  Make sure that the OLE libraries are the correct version.	OLE 2.0 konnte nicht initialisiert werden. Prüfen Sie, ob die OLE-Bibliotheken die richtige Version haben.
+Use same font for printing as for display	Verwendet für den Druck dieselbe Schriftart wie für die Anzeige.
+Unavailable	Nicht verfügbar
+%lu KB Free	%lu KB frei
+Not present	Nicht vorhanden
+Present	Vorhanden
+File Open	Datei öffnen
+File Save As	Datei speichern unter
+All Files (*.*)	Alle Dateien (*.*)
+Untitled	Unbenannt
+File Save Copy As	Kopie speichern unter
+Invalid filename.	Ungültiger Dateiname.
+Failed to open document.	Das Dokument kann nicht geöffnet werden.
+Failed to save document.	Das Dokument kann nicht gespeichert werden.
+Save Changes to %1?	Änderungen in %1 speichern?
+Failed to create empty document.	Es kann kein leeres Dokument erstellt werden.
+The file is too large to open.	Die Datei ist zu groß zum Öffnen.
+Could not start print job.	Der Druckauftrag kann nicht gestartet werden.
+Failed to launch help.	Die Hilfe kann nicht gestartet werden.
+Internal application error.	Interner Anwendungsfehler.
+Command failed.	Der Befehl ist fehlgeschlagen.
+Insufficient memory to perform operation.	Nicht genügend Arbeitsspeicher für diesen Vorgang.
+VBX control called a VB 2.0 API\nUnpredictable actions may occur.	Ein VBX-Steuerelement hat eine VB-2.0-Funktion aufgerufen.\nDas Ergebnis ist nicht vorhersehbar.
+Update %1 before proceeding?	%1 vor dem Fortfahren aktualisieren?
+Could not update client.	Der Client kann nicht aktualisiert werden.
+Unable to read write-only property.	Eine Nur-Schreiben-Eigenschaft kann nicht gelesen werden.
+Unable to write read-only property.	Eine schreibgeschützte Eigenschaft kann nicht geschrieben werden.
+Unexpected file format.	Unerwartetes Dateiformat.
+%1\nCannot find this file.\nPlease verify that the correct path and file name are given.	%1\nDiese Datei wurde nicht gefunden.\nPrüfen Sie, ob Pfad und Dateiname richtig angegeben sind.
+Destination disk drive is full.	Das Ziellaufwerk ist voll.
+Unable to read from %1, it is opened by someone else.	%1 kann nicht gelesen werden, da die Datei von jemand anderem geöffnet ist.
+Unable to write to %1, it is read-only or opened by someone else.	Auf %1 kann nicht geschrieben werden. Die Datei ist schreibgeschützt oder von jemand anderem geöffnet.
+An unexpected error occurred while reading %1.	Beim Lesen von %1 ist ein unerwarteter Fehler aufgetreten.
+An unexpected error occurred while writing %1.	Beim Schreiben von %1 ist ein unerwarteter Fehler aufgetreten.
+Please enter an integer.	Geben Sie eine ganze Zahl ein.
+Please enter a number.	Geben Sie eine Zahl ein.
+Please enter an integer between %1 and %2.	Geben Sie eine ganze Zahl zwischen %1 und %2 ein.
+Please enter a number between %1 and %2.	Geben Sie eine Zahl zwischen %1 und %2 ein.
+Please enter no more than %1 characters.	Geben Sie höchstens %1 Zeichen ein.
+Please select a button.	Wählen Sie eine Schaltfläche.
+OK\n50	OK\n50
+Cancel\n50	Abbrechen\n50
+&Apply\n50	Ü&bernehmen\n50
+&Help\n50	&Hilfe\n50
+Close	Schließen
+Unable to load mail system support.	Die Unterstützung für das Mail-System kann nicht geladen werden.
+Mail system DLL is invalid.	Die DLL des Mail-Systems ist ungültig.
+Send Mail failed to send message.	Die Nachricht konnte nicht gesendet werden.
+on %1	an %1
+&One Page	&Eine Seite
+&Two Page	&Zwei Seiten
+Page %u	Seite %u
+Page %u\nPages %u-%u\n	Seite %u\nSeiten %u-%u\n
+&Update %1	%1 &aktualisieren
+E&xit && Return to %1	&Beenden und zurück zu %1

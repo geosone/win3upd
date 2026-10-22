@@ -1,0 +1,15 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Windows 3.11 (Update für Windows 3.1)
+Id=W3U-310TO311
+DefaultDir=%WINDIR%\UPDATES\310TO311
+Windows=no
+Done=Windows ist auf Version 3.11 aktualisiert. Der registrierte Name und die Firma sind danach leer (sie stehen in USER.EXE).
+
+[Welcome]
+Hebt Windows 3.1 auf Version 3.11: acht Kerndateien mit Fehlerbehebungen von Microsoft (WW0981), hier in der deutschen Fassung aus Windows 3.11: USER.EXE, GDI.EXE, KRNL386.EXE, COMMDLG.DLL, SHELL.DLL, die Druckertreiber PSCRIPT.DRV und UNIDRV.DLL (nur wenn installiert) und VTDA.386.
+Nur für Windows 3.1; Windows für Workgroups 3.11 hat diese Dateien schon (dort ändert das Paket nichts). Die alten Dateien werden gesichert und beim Entfernen zurückgelegt.
+Wer Novell NetWare benutzt, ändert danach in SYSTEM.INI im Abschnitt [386Enh] die Zeile device=*vtd in device=vtda.386.
+
+[Find]
+WFW=WFWSYS.CFG

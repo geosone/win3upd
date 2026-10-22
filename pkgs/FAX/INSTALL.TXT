@@ -1,0 +1,15 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=Fixes für Microsoft At Work PC Fax
+Id=W3U-FAX
+DefaultDir=%WINDIR%\UPDATES\FAX
+Windows=no
+
+[Welcome]
+Fehlerbehebungen für das Fax von Windows für Workgroups 3.11 (Microsoft At Work PC Fax). Ersetzt werden nur Dateien, die schon installiert sind:
+AWFAXIO.DLL (WG1126) verhindert, dass das System mit manchen Modems hängen bleibt.
+EFAXPUMP.DLL, FAXCOVER.DLL und FAXOPT.DLL (WG0992) beheben unter anderem eine immer größer werdende EFAXPUMP.INI. FAXOPT.DLL bekommt die deutschen Texte (Standard-Papierformat A4); EFAXPUMP.DLL und FAXCOVER.DLL gibt es nur englisch, ihre Meldungen und das Deckblatt erscheinen danach englisch.
+
+[Options]
+Option=on|Modem-Fix AWFAXIO.DLL (WG1126)
+Option=on|Fax-Fixes WG0992 (teils englisch)

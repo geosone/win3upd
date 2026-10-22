@@ -1,0 +1,7 @@
+; Kframe 1.20E (freeware: only in the original KFRAME.LZH, which is on the CD
+; and in the package directory)
+%DIR%\KFRAME.EXE             kframe:KFRAME.EXE
+%DIR%\KFRAMEHK.DLL           kframe:KFRAMEHK.DLL
+%DIR%\KFRAME.HLP             kframe:KFRAME.HLP
+%DIR%\README.TXT             kframe:README.TXT
+%DIR%\KFRAME.LZH             kframe:

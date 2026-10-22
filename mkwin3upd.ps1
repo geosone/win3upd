@@ -228,12 +228,12 @@ foreach ($name in $names) {
     $used = @{}
     foreach ($l in ((Read-Utf8 (Join-Path $src 'FILES.TXT')) -split "`r?`n")) {
         if ($l -match '^\s*(;|$)') { continue }
-        if ($l -notmatch '^\s*(?:([^|\s]*)\|)?(\S+)\s+(\S+)(?:\s+-"([^"]+)")?(?:\s+msg="([^"]+)")?(?:\s+reg="([^"]+)")?\s*$') { throw "$name\FILES.TXT: invalid line: $l" }
-        $cond, $target, $spec, $cut, $msg, $reg = $Matches[1], $Matches[2], $Matches[3], $Matches[4], $Matches[5], $Matches[6]
+        if ($l -notmatch '^\s*(?:([^|\s]*)\|)?(\S+)\s+(\S+)(?:\s+-"([^"]+)")?(?:\s+msg="([^"]+)")?(?:\s+reg="([^"]+)")?(?:\s+res="([^"]+)")?(?:\s+set="([^"]+)")?(?:\s+font="([^"]+)")?(?:\s+tr="([^"]+)")?\s*$') { throw "$name\FILES.TXT: invalid line: $l" }
+        $cond, $target, $spec, $cut, $msg, $reg, $res, $set, $font, $tr = $Matches[1], $Matches[2], $Matches[3], $Matches[4], $Matches[5], $Matches[6], $Matches[7], $Matches[8], $Matches[9], $Matches[10]
         # target "-" or "-NAME": only on the CD (OLE2.REG for [Registry] Import=)
         $cdOnly = $target.StartsWith('-')
         $base = $(if ($target -eq '-') { ($spec -split '[:/\\!#]')[-1] } elseif ($cdOnly) { $target.Substring(1) } else { ($target -split '\\')[-1] }).ToUpperInvariant()
-        $key = "$spec -$cut msg=$msg reg=$reg"
+        $key = "$spec -$cut msg=$msg reg=$reg res=$res set=$set font=$font tr=$tr"
         if ($used.ContainsKey($key)) {
             # the same file for another target: once on the CD
             $cdName = $used[$key]
@@ -251,6 +251,23 @@ foreach ($name in $names) {
             if ($msg) {
                 # msg="source": NET.MSG with the texts of that (German) one
                 $data = [GeosOne.Win3Upd.NetMsg]::Merge($data, (Read-Source $msg))
+            }
+            if ($res) {
+                # res="source": a fixed program with the texts (menus, dialogs,
+                # strings, version) of that (German) one
+                # set="...": texts the fix changed, in that language
+                $data = [GeosOne.Win3Upd.NeResource]::Merge($data, (Read-Source $res), $set)
+            }
+            if ($font) {
+                # font="source": a font file with the first font of that one
+                # (8-point MS Sans Serif) in the height of its font (FONT95)
+                $data = [GeosOne.Win3Upd.NeResource]::SystemFont($data, (Read-Source $font))
+            }
+            if ($tr) {
+                # tr="local:FILE": the texts of the menus, dialogs and string
+                # tables translated with that table of the package
+                if ($tr -notmatch '^local:(.+)$') { throw "$name\FILES.TXT: tr= needs local:FILE" }
+                $data = [GeosOne.Win3Upd.NeResource]::Translate($data, (Read-Utf8 (Join-Path $src $Matches[1])))
             }
             if ($reg) {
                 # reg="source": a REGEDIT file with the values of that (German)

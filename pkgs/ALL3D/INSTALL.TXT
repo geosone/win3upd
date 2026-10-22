@@ -1,0 +1,15 @@
+[Setup]
+Title=Windows 3.1x Update
+Product=All3D 1.30 (Andreas Furrer)
+Id=W3U-ALL3D
+DefaultDir=%WINDIR%\UPDATES\ALL3D
+Windows=no
+Done=All3D startet mit dem nächsten Start von Windows (Gruppe Autostart). Einstellungen: Systemsteuerung, All3D.
+
+[Welcome]
+All3D 1.30 von Andreas Furrer (Freeware) gibt den Dialogen fast aller Programme das dreidimensionale Aussehen von CTL3D, wie unter Windows 95. Es startet über die Gruppe Autostart und läuft unsichtbar; eingestellt wird es in der Systemsteuerung (All3D, auch je Programm). Die Oberfläche ist englisch, eine deutsche Fassung gibt es nicht. Braucht CTL3D (Paket CTL3D).
+Das Originalarchiv ALL3D130.ZIP liegt mit der Beschreibung ALL3D.TXT im Paketverzeichnis.
+
+[ProgMan]
+Item=|Autostart|All3D|%DIR%\ALL3D.EXE
+Item=|Zubehör|All3D-Einstellungen|%DIR%\ALL3DC.EXE
