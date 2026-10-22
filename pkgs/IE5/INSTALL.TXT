@@ -14,4 +14,4 @@ Windows=%DIR%\SETUP.EXE
 
 [ProgMan]
 Item=|Hauptgruppe|Internet Explorer 5 installieren|%DIR%\SETUP.EXE
-Item=|Hauptgruppe|128-Bit-Verschlüsselung installieren|%DIR%\SE128-16.EXE
+Item=|Hauptgruppe|128-Bit-Verschlüsselung installieren|%DIR%\SE128_16.EXE

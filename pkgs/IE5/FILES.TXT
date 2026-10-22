@@ -12,4 +12,4 @@
 %DIR%\STACKND.CAB               ie5stack:
 %DIR%\MDMINF.CAB                ie5mdm:
 %DIR%\JAVA.CAB                  ie5java:
-%DIR%\SE128-16.EXE              ie5se128:
+%DIR%\SE128_16.EXE              ie5se128:

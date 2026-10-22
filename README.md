@@ -75,7 +75,7 @@ setup (dependencies first; `off|NAME` is not selected at first).
 | FONTVIEW | Font viewer of Windows 95 (Win32s) | German |
 | FREECELL | FreeCell of Windows 95 (Win32s) | German |
 | FTASKMAN | FTaskman 1.24 by Andreas Furrer (freeware) as the task list (`[boot] taskman.exe=`) | German |
-| IE5 | Internet Explorer 5.0 (16 bit) with Outlook Express, dialer and Java: its own setup starts under Windows (`[Run] Windows=`), a Program Manager item starts it again; the 128-bit encryption update (SE128-16.EXE) as an item for after the setup | German |
+| IE5 | Internet Explorer 5.0 (16 bit) with Outlook Express, dialer and Java: its own setup starts under Windows (`[Run] Windows=`), a Program Manager item starts it again; the 128-bit encryption update (SE128_16.EXE) as an item for after the setup | German |
 | KFRAME | Kframe 1.20E by Kaoru Nakajima (freeware): moving frames when windows open and close, blinking menus (not selected at first) | English |
 | MSPAINT | Paint of Windows 95 (Win32s) | German |
 | MSVCRT | Visual C++ 2.x runtime and MFC 3.0 for Win32s (Visual C++ 2.2) | neutral |
