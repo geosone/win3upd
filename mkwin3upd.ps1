@@ -203,6 +203,9 @@ if (-not $Installer) {
         Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1
     if (-not $Installer) { throw "INSTALL.EXE not found (-Installer)" }
 }
+# SETUP.EXE, the Windows program of the installer (2.0), next to INSTALL.EXE
+$Setup = Join-Path (Split-Path -Parent (Resolve-Path -LiteralPath $Installer)) 'SETUP.EXE'
+if (-not (Test-Path -LiteralPath $Setup)) { throw "SETUP.EXE not found next to $Installer" }
 $pkgRoot = Join-Path $PSScriptRoot 'pkgs'
 $names = @(Get-ChildItem -LiteralPath $pkgRoot -Directory | ForEach-Object { $_.Name } | Sort-Object)
 # pwsh -File passes "A,B" as one string
@@ -300,6 +303,7 @@ foreach ($name in $names) {
     if ($long.Count) { throw "$name\INSTALL.TXT: line longer than 500 characters: $($long[0].Substring(0, 40))..." }
     [IO.File]::WriteAllBytes((Join-Path $dst 'INSTALL.INI'), (ConvertTo-DosText $text))
     Copy-Item -LiteralPath $Installer -Destination (Join-Path $dst 'INSTALL.EXE')
+    if ($Setup) { Copy-Item -LiteralPath $Setup -Destination (Join-Path $dst 'SETUP.EXE') }
     $product = if ($ini -match '(?m)^Product=(.*)$') { $Matches[1].Trim() } else { $name }
     $index += '{0,-9} {1}' -f $name, $product
 }
@@ -317,6 +321,7 @@ for ($i = 0; $i -lt $order.Count; $i++) { $inst += "Inst$($i + 1)=$($order[$i])"
 $main = (Read-Utf8 (Join-Path $PSScriptRoot 'INSTALL.TXT')).TrimEnd() + "`n`n[Installer]`n" + ($inst -join "`n") + "`n`n" + $textDe
 [IO.File]::WriteAllBytes((Join-Path $cd 'INSTALL.INI'), (ConvertTo-DosText $main))
 Copy-Item -LiteralPath $Installer -Destination (Join-Path $cd 'INSTALL.EXE')
+if ($Setup) { Copy-Item -LiteralPath $Setup -Destination (Join-Path $cd 'SETUP.EXE') }
 
 # LIESMICH.TXT: the packages of the CD
 $readme = Read-Utf8 (Join-Path $PSScriptRoot 'LIESMICH.TXT')
